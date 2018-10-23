@@ -10,47 +10,23 @@ import Foundation
 import UIKit
 import Alamofire
 
-class DiscoverViewController: UITableViewController {
-    var genre: GenreModel?
-    var isMovie: Bool? = false
-    var discovered: DiscoverModel? = nil
-    
+class DiscoverViewController: BaseTableViewController, DiscoverContractView {
+    private var presenter: DiscoverContractPresenter?
+    private var result: [DiscoverItemModel]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        retrieveDiscover()
+
+        presenter = DiscoverPresenter(view: self, repository: Repository(view: self))
+
+        presenter?.retrieveDiscover()
+
         self.tableView.allowsSelection = false
     }
     
-    func retrieveDiscover() {
-        print("retrieve discover")
-        let sv = UIViewController.displaySpinner(onView: self.view)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        var url: String
-        if  isMovie! {
-            url = Urls.DiscoverMovie
-        } else {
-            url = Urls.DiscoverTv
-        }
-        let parameters: Parameters = [
-            "with_genres": (self.genre?.id)!,
-            "page": 1
-        ]
-        
-        Alamofire.request(url, method: .get, parameters: parameters,
-                          encoding: URLEncoding(destination: .queryString), headers: Headers.AuthPublic)
-            .responseObject {
-                (response: DataResponse<DiscoverModel>) in
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                UIViewController.removeSpinner(spinner: sv)
-                switch response.result {
-                case .success:
-                    self.discovered = response.result.value ?? nil
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    print(error)
-                }
-        }
+    func loadContent(result: [DiscoverItemModel]?) {
+        self.result = result
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,8 +34,8 @@ class DiscoverViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if ((self.discovered?.result) != nil) {
-            return self.discovered!.result!.count
+        if ((self.result) != nil) {
+            return self.result!.count
         }
         return 0
     }
@@ -67,7 +43,7 @@ class DiscoverViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath) as! DiscoverViewCell
         // populate cell with infos
-        let media = self.discovered!.result![indexPath.row]
+        let media = self.result![indexPath.row]
         cell.posterImageView.image = #imageLiteral(resourceName: "placeholder")
         cell.posterImageView.downloadImageFrom(link: Urls.MediaImage(media.poster_path!), contentMode: UIViewContentMode.scaleAspectFit)
         

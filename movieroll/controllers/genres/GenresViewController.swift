@@ -10,16 +10,14 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 
-class ViewController: UITableViewController {
-    var languages: [LanguageModel]?
-    var selectedLanguage: LanguageModel?
-    private var movieGenres: [GenreModel] = []
-    private var tvGenres: [GenreModel] = []
-    private var selectedGenre: GenreModel?
-    private var isMovie: Bool = false
+class GenresViewController: UITableViewController {
+    var presenter: GenresPresenterContract?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         // request the supported languages
         retrieveLanguages()
     }
@@ -185,9 +183,7 @@ class ViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DiscoverSegue" {
-            let controller = segue.destination as! DiscoverViewController
-            controller.genre = self.selectedGenre
-            controller.isMovie = self.isMovie
+            UserSettings.shared.saveGenre(isMovie: self.isMovie, genre: self.selectedGenre!)
         }
     }
 }

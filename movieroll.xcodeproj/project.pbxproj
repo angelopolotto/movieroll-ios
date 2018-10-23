@@ -8,30 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		3C919D1E8AC5785EA14E253B /* Pods_movierollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93117A5A6FEFB49806D1D30A /* Pods_movierollUITests.framework */; };
-		71244E6521220D8E00A70D39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71244E6421220D8E00A70D39 /* LoginViewController.swift */; };
-		71244E6721220DB100A70D39 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71244E6621220DB100A70D39 /* RegisterViewController.swift */; };
+		71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D49217FBBBE003963FD /* GenresContract.swift */; };
+		71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4B217FBC51003963FD /* GenresPresenter.swift */; };
+		71110D4E217FBEDC003963FD /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4D217FBEDC003963FD /* UserSettings.swift */; };
+		71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4F217FBEEB003963FD /* IUserSettings.swift */; };
 		71244E692122163800A70D39 /* SharedPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71244E682122163800A70D39 /* SharedPref.swift */; };
 		7142BDFE211B37DA0081D58A /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7142BDFD211B37DA0081D58A /* Urls.swift */; };
 		71972569211B62B4004DD742 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972568211B62B4004DD742 /* LanguageModel.swift */; };
 		7197256B211B6DBD004DD742 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256A211B6DBD004DD742 /* Headers.swift */; };
 		7197256E211B6ED7004DD742 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256D211B6ED7004DD742 /* Spinner.swift */; };
-		71972572211CB1DF004DD742 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972571211CB1DF004DD742 /* DiscoverViewController.swift */; };
 		71972574211CCED4004DD742 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972573211CCED4004DD742 /* DiscoverModel.swift */; };
 		71972576211CCEE2004DD742 /* DiscoverItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972575211CCEE2004DD742 /* DiscoverItemModel.swift */; };
 		71972578211CD190004DD742 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972577211CD190004DD742 /* VideoModel.swift */; };
-		7197257A211CD990004DD742 /* DiscoverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972579211CD990004DD742 /* DiscoverViewCell.swift */; };
-		7197257C211DB81D004DD742 /* TraillerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197257B211DB81D004DD742 /* TraillerViewCell.swift */; };
 		7197257E211DCE29004DD742 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197257D211DCE29004DD742 /* Utils.swift */; };
 		71972580211DDB79004DD742 /* ImageViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197257F211DDB79004DD742 /* ImageViewHelper.swift */; };
 		71F3EFAE2118B3AF00454D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */; };
-		71F3EFB02118B3AF00454D71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFAF2118B3AF00454D71 /* ViewController.swift */; };
 		71F3EFB32118B3AF00454D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB12118B3AF00454D71 /* Main.storyboard */; };
 		71F3EFB52118B3AF00454D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB42118B3AF00454D71 /* Assets.xcassets */; };
 		71F3EFB82118B3AF00454D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB62118B3AF00454D71 /* LaunchScreen.storyboard */; };
 		71F3EFC32118B3AF00454D71 /* movierollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFC22118B3AF00454D71 /* movierollTests.swift */; };
 		71F3EFCE2118B3AF00454D71 /* movierollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFCD2118B3AF00454D71 /* movierollUITests.swift */; };
 		78ADEC500DF7D9A8BE63747F /* Pods_movierollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6CE8E155BBD2F51A2AAAB4 /* Pods_movierollTests.framework */; };
+		E849F00DC74CF4CC870BD80E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */; };
+		E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FBB74ACC25A41721F9EA /* DiscoverPresenter.swift */; };
+		E849F36A4CC165F9ADBDBF16 /* DiscoverContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FE30DEB4CA18175427E7 /* DiscoverContract.swift */; };
+		E849F3E997316FDA81FBC5FA /* IRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FABF4D8BA465B2B2D75B /* IRepository.swift */; };
 		E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F0F7AD7002097F15DAF5 /* GenreModel.swift */; };
+		E849F6C0F561ECC13B9380A9 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F7FF3334CF4174F8F3CF /* DiscoverViewController.swift */; };
+		E849F750EF98EFA2815D22C6 /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FFD67FF1AE67B5464917 /* Respository.swift */; };
+		E849F84727797EDDCB7ED23F /* BaseViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FF1D1D356AB4B16D162B /* BaseViewContract.swift */; };
+		E849F9E96A92084B851252D4 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F686E6924CF85882EE42 /* GenresViewController.swift */; };
+		E849FAD31C67BF516C96AD69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F18495BD932EE87CA029 /* LoginViewController.swift */; };
+		E849FCB40A46F6DA873DF17F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F445A7B64D189981037B /* BaseViewController.swift */; };
+		E849FECFBC050FD887D608E5 /* DiscoverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F729853B893D8EF4A40C /* DiscoverViewCell.swift */; };
+		E849FFD0B925A523EF490B93 /* TraillerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */; };
 		EF0557A1E1F6750C06D1DC44 /* Pods_movieroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851E330660E30DD31911ED7A /* Pods_movieroll.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,24 +66,22 @@
 		345228276BFE7B4B5D648B04 /* Pods-movieroll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.release.xcconfig"; sourceTree = "<group>"; };
 		3B67CAA82774643B2E6029B2 /* Pods-movierollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.release.xcconfig"; sourceTree = "<group>"; };
 		6783A257E150AA1A6287184F /* Pods-movieroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.debug.xcconfig"; sourceTree = "<group>"; };
-		71244E6421220D8E00A70D39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		71244E6621220DB100A70D39 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		71110D49217FBBBE003963FD /* GenresContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresContract.swift; sourceTree = "<group>"; };
+		71110D4B217FBC51003963FD /* GenresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPresenter.swift; sourceTree = "<group>"; };
+		71110D4D217FBEDC003963FD /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		71110D4F217FBEEB003963FD /* IUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSettings.swift; sourceTree = "<group>"; };
 		71244E682122163800A70D39 /* SharedPref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPref.swift; sourceTree = "<group>"; };
 		7142BDFD211B37DA0081D58A /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		71972568211B62B4004DD742 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		7197256A211B6DBD004DD742 /* Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
 		7197256D211B6ED7004DD742 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
-		71972571211CB1DF004DD742 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		71972573211CCED4004DD742 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
 		71972575211CCEE2004DD742 /* DiscoverItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverItemModel.swift; sourceTree = "<group>"; };
 		71972577211CD190004DD742 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
-		71972579211CD990004DD742 /* DiscoverViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewCell.swift; sourceTree = "<group>"; };
-		7197257B211DB81D004DD742 /* TraillerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraillerViewCell.swift; sourceTree = "<group>"; };
 		7197257D211DCE29004DD742 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7197257F211DDB79004DD742 /* ImageViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewHelper.swift; sourceTree = "<group>"; };
 		71F3EFAA2118B3AF00454D71 /* movieroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71F3EFAF2118B3AF00454D71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71F3EFB22118B3AF00454D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71F3EFB42118B3AF00454D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71F3EFB72118B3AF00454D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +98,18 @@
 		9A6CE8E155BBD2F51A2AAAB4 /* Pods_movierollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movierollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34AAE2BA4D2BDA90C18D86F /* Pods-movierollUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollUITests/Pods-movierollUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E849F0F7AD7002097F15DAF5 /* GenreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
+		E849F18495BD932EE87CA029 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraillerViewCell.swift; sourceTree = "<group>"; };
+		E849F445A7B64D189981037B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E849F686E6924CF85882EE42 /* GenresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
+		E849F729853B893D8EF4A40C /* DiscoverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewCell.swift; sourceTree = "<group>"; };
+		E849F7FF3334CF4174F8F3CF /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		E849FABF4D8BA465B2B2D75B /* IRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRepository.swift; sourceTree = "<group>"; };
+		E849FBB74ACC25A41721F9EA /* DiscoverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
+		E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E849FE30DEB4CA18175427E7 /* DiscoverContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverContract.swift; sourceTree = "<group>"; };
+		E849FF1D1D356AB4B16D162B /* BaseViewContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewContract.swift; sourceTree = "<group>"; };
+		E849FFD67FF1AE67B5464917 /* Respository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
 		F4793DBE7B6A2928EAFFC20A /* Pods-movierollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +169,10 @@
 			children = (
 				7142BDFD211B37DA0081D58A /* Urls.swift */,
 				7197256A211B6DBD004DD742 /* Headers.swift */,
+				E849FFD67FF1AE67B5464917 /* Respository.swift */,
+				E849FABF4D8BA465B2B2D75B /* IRepository.swift */,
+				71110D4D217FBEDC003963FD /* UserSettings.swift */,
+				71110D4F217FBEEB003963FD /* IUserSettings.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -168,14 +192,23 @@
 		7110368E211B25310024D1C3 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				71F3EFAF2118B3AF00454D71 /* ViewController.swift */,
-				71972571211CB1DF004DD742 /* DiscoverViewController.swift */,
-				71972579211CD990004DD742 /* DiscoverViewCell.swift */,
-				7197257B211DB81D004DD742 /* TraillerViewCell.swift */,
-				71244E6421220D8E00A70D39 /* LoginViewController.swift */,
-				71244E6621220DB100A70D39 /* RegisterViewController.swift */,
+				E849FC8332137061F4E6AEA1 /* discover */,
+				E849F2FC27D176F67253A2AC /* login */,
+				E849F55C308BBCA6D15DA667 /* register */,
+				E849F772C963D08A05AD0FF2 /* genres */,
+				E849FF2992FCE5845BEA4895 /* base */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		71110D48217FB750003963FD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E849F729853B893D8EF4A40C /* DiscoverViewCell.swift */,
+				E849F7FF3334CF4174F8F3CF /* DiscoverViewController.swift */,
+				E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		7197256C211B6EBA004DD742 /* helpers */ = {
@@ -243,6 +276,51 @@
 				71F3EFCF2118B3AF00454D71 /* Info.plist */,
 			);
 			path = movierollUITests;
+			sourceTree = "<group>";
+		};
+		E849F2FC27D176F67253A2AC /* login */ = {
+			isa = PBXGroup;
+			children = (
+				E849F18495BD932EE87CA029 /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		E849F55C308BBCA6D15DA667 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		E849F772C963D08A05AD0FF2 /* genres */ = {
+			isa = PBXGroup;
+			children = (
+				E849F686E6924CF85882EE42 /* GenresViewController.swift */,
+				71110D49217FBBBE003963FD /* GenresContract.swift */,
+				71110D4B217FBC51003963FD /* GenresPresenter.swift */,
+			);
+			path = genres;
+			sourceTree = "<group>";
+		};
+		E849FC8332137061F4E6AEA1 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+				71110D48217FB750003963FD /* view */,
+				E849FE30DEB4CA18175427E7 /* DiscoverContract.swift */,
+				E849FBB74ACC25A41721F9EA /* DiscoverPresenter.swift */,
+			);
+			path = discover;
+			sourceTree = "<group>";
+		};
+		E849FF2992FCE5845BEA4895 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				E849FF1D1D356AB4B16D162B /* BaseViewContract.swift */,
+				E849F445A7B64D189981037B /* BaseViewController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,19 +545,29 @@
 				7197256B211B6DBD004DD742 /* Headers.swift in Sources */,
 				7197256E211B6ED7004DD742 /* Spinner.swift in Sources */,
 				7197257E211DCE29004DD742 /* Utils.swift in Sources */,
-				7197257A211CD990004DD742 /* DiscoverViewCell.swift in Sources */,
 				71972576211CCEE2004DD742 /* DiscoverItemModel.swift in Sources */,
-				71F3EFB02118B3AF00454D71 /* ViewController.swift in Sources */,
 				71972569211B62B4004DD742 /* LanguageModel.swift in Sources */,
 				71F3EFAE2118B3AF00454D71 /* AppDelegate.swift in Sources */,
-				71972572211CB1DF004DD742 /* DiscoverViewController.swift in Sources */,
 				71244E692122163800A70D39 /* SharedPref.swift in Sources */,
 				7142BDFE211B37DA0081D58A /* Urls.swift in Sources */,
-				71244E6521220D8E00A70D39 /* LoginViewController.swift in Sources */,
-				71244E6721220DB100A70D39 /* RegisterViewController.swift in Sources */,
-				7197257C211DB81D004DD742 /* TraillerViewCell.swift in Sources */,
 				E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */,
 				71972578211CD190004DD742 /* VideoModel.swift in Sources */,
+				71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */,
+				71110D4E217FBEDC003963FD /* UserSettings.swift in Sources */,
+				E849FECFBC050FD887D608E5 /* DiscoverViewCell.swift in Sources */,
+				E849F6C0F561ECC13B9380A9 /* DiscoverViewController.swift in Sources */,
+				E849FAD31C67BF516C96AD69 /* LoginViewController.swift in Sources */,
+				E849F00DC74CF4CC870BD80E /* RegisterViewController.swift in Sources */,
+				71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */,
+				71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */,
+				E849FFD0B925A523EF490B93 /* TraillerViewCell.swift in Sources */,
+				E849F9E96A92084B851252D4 /* GenresViewController.swift in Sources */,
+				E849F36A4CC165F9ADBDBF16 /* DiscoverContract.swift in Sources */,
+				E849F84727797EDDCB7ED23F /* BaseViewContract.swift in Sources */,
+				E849FCB40A46F6DA873DF17F /* BaseViewController.swift in Sources */,
+				E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */,
+				E849F750EF98EFA2815D22C6 /* Respository.swift in Sources */,
+				E849F3E997316FDA81FBC5FA /* IRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
