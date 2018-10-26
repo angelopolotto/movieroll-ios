@@ -9,11 +9,14 @@
 import Foundation
 
 protocol GenresViewContract {
-    func loadGenres()
-    func showDialoag()
+    func populateList(movieGenres: [GenreModel], tvGenres: [GenreModel])
+    func showDialoag(languages: [LanguageModel])
 }
 
 protocol GenresPresenterContract {
     func retrieveLanguages()
     func loadGenres()
+    func selectedItem(index: Int, isMovie: Bool)
+    func selectedLanguage(language: LanguageModel)
+    func saveGenre()
 }

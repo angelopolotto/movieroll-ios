@@ -167,10 +167,9 @@
 		7110368C211B25050024D1C3 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				71110D512183445D003963FD /* repository */,
 				7142BDFD211B37DA0081D58A /* Urls.swift */,
 				7197256A211B6DBD004DD742 /* Headers.swift */,
-				E849FFD67FF1AE67B5464917 /* Respository.swift */,
-				E849FABF4D8BA465B2B2D75B /* IRepository.swift */,
 				71110D4D217FBEDC003963FD /* UserSettings.swift */,
 				71110D4F217FBEEB003963FD /* IUserSettings.swift */,
 			);
@@ -209,6 +208,15 @@
 				E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		71110D512183445D003963FD /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				E849FFD67FF1AE67B5464917 /* Respository.swift */,
+				E849FABF4D8BA465B2B2D75B /* IRepository.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 		7197256C211B6EBA004DD742 /* helpers */ = {

@@ -11,13 +11,17 @@ import Foundation
 class UserSettings: IUserSettings {
     static let shared = UserSettings()
     
+    var isMovie: Bool?
+    var genre: GenreModel?
+    
     private init() {}
     
     func saveLanguage(language: LanguageModel) {
-        <#code#>
+        SharedPref.write(key: "selected_language", value: (language.toJSONString())!)
     }
     
     func saveGenre(isMovie: Bool, genre: GenreModel) {
-        <#code#>
+        self.isMovie = isMovie
+        self.genre = genre
     }
 }
