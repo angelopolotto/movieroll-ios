@@ -11,4 +11,6 @@ import Foundation
 protocol IUserSettings {
     func saveLanguage(language: LanguageModel)
     func saveGenre(isMovie: Bool, genre: GenreModel)
+    func getIsMovie() -> Bool
+    func getGenre() -> GenreModel
 }

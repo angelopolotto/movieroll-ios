@@ -24,4 +24,11 @@ class UserSettings: IUserSettings {
         self.isMovie = isMovie
         self.genre = genre
     }
+    
+    func getIsMovie() -> Bool {
+        return self.isMovie!
+    }
+    func getGenre() -> GenreModel {
+        return self.genre!
+    }
 }

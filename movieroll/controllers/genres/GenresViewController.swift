@@ -79,8 +79,8 @@ class GenresViewController: BaseTableViewController, GenresViewContract {
     
     // show dialog to choose lang
     func showDialoag(languages: [LanguageModel]) {
-        let langAlert = UIAlertController(title: "Choose your language",
-                message: "The language preference to retrieve info about the movies", preferredStyle: .actionSheet)
+        let langAlert = UIAlertController(title: Strings.shared.value(forKey: "genres.dialog_title"),
+                                          message: Strings.shared.value(forKey: "genres.dialog_message"), preferredStyle: .actionSheet)
         for lang in languages {
             langAlert.addAction(UIAlertAction(title: lang.description, style: .default, handler: {
                 (UIAlertAction) in

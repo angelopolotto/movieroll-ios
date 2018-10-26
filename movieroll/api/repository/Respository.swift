@@ -25,40 +25,9 @@ class Repository: IRepository {
             case .success:
                 callback(response.result.value ?? [])
             case .failure(let error):
-                self.view.showError(message: error as! String)
+                self.view.showError(message: error.localizedDescription)
             }
         }
-    }
-
-    func retrieveDiscover(isMovie: Bool, genre: GenreModel, page: Int, callback: @escaping (_ response: DiscoverModel?) -> ()) {
-        view.showProgress()
-
-        var url: String
-        if  isMovie {
-            url = Urls.DiscoverMovie
-        } else {
-            url = Urls.DiscoverTv
-        }
-        
-        let parameters: Parameters = [
-            "with_genres": (genre.id)!,
-            "page": page
-        ]
-
-        Alamofire.request(url, method: .get, parameters: parameters,
-                            encoding: URLEncoding(destination: .queryString),
-                            headers: Headers.AuthPublic)
-                .responseObject {
-                    (response: DataResponse<DiscoverModel>) in
-                    self.view.hideProgress()
-                    switch response.result {
-                        case .success:
-                            callback(response.result.value)
-                        case .failure(let error):
-                            self.view.showError(message: error.localizedDescription)
-                            print(error)
-                    }
-                }
     }
     
     func loadToken(selectedLanguage: LanguageModel, callback: @escaping (_ token: String) -> ()) {
@@ -79,12 +48,12 @@ class Repository: IRepository {
                     case .success:
                         let jsonResponse = response.result.value as! NSDictionary
                         if jsonResponse["token"] != nil {
-                            callback(jsonResponse["token"]! as! String)
                             Headers.token = String(describing: jsonResponse["token"]!)
                             print(Headers.token)
+                            callback(jsonResponse["token"]! as! String)
                         }
                     case .failure(let error):
-                        self.view.showError(message: error as! String)
+                        self.view.showError(message: error.localizedDescription)
                 }
         }
     }
@@ -109,12 +78,43 @@ class Repository: IRepository {
                                         let tvGenres = response.result.value ?? []
                                         callback(movieGenres, tvGenres)
                                     case .failure(let error):
-                                        self.view.showError(message: error as! String)
+                                        self.view.showError(message: error.localizedDescription)
                                 }
                             }
                     case .failure(let error):
                         self.view.hideProgress()
-                        self.view.showError(message: error as! String)
+                        self.view.showError(message: error.localizedDescription)
+                }
+        }
+    }
+    
+    func retrieveDiscover(isMovie: Bool, genre: GenreModel, page: Int, callback: @escaping (_ response: DiscoverModel?) -> ()) {
+        view.showProgress()
+        
+        var url: String
+        if  isMovie {
+            url = Urls.DiscoverMovie
+        } else {
+            url = Urls.DiscoverTv
+        }
+        
+        let parameters: Parameters = [
+            "with_genres": (genre.id)!,
+            "page": page
+        ]
+        
+        Alamofire.request(url, method: .get, parameters: parameters,
+                          encoding: URLEncoding(destination: .queryString),
+                          headers: Headers.AuthPublic)
+            .responseObject {
+                (response: DataResponse<DiscoverModel>) in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    callback(response.result.value)
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
                 }
         }
     }

@@ -22,6 +22,8 @@
 		71972578211CD190004DD742 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972577211CD190004DD742 /* VideoModel.swift */; };
 		7197257E211DCE29004DD742 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197257D211DCE29004DD742 /* Utils.swift */; };
 		71972580211DDB79004DD742 /* ImageViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197257F211DDB79004DD742 /* ImageViewHelper.swift */; };
+		719A923B21837404002E905F /* Strings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 719A923A21837404002E905F /* Strings.plist */; };
+		719A923D2183A242002E905F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A923C2183A242002E905F /* Strings.swift */; };
 		71F3EFAE2118B3AF00454D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */; };
 		71F3EFB32118B3AF00454D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB12118B3AF00454D71 /* Main.storyboard */; };
 		71F3EFB52118B3AF00454D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB42118B3AF00454D71 /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		71972577211CD190004DD742 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		7197257D211DCE29004DD742 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7197257F211DDB79004DD742 /* ImageViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewHelper.swift; sourceTree = "<group>"; };
+		719A923A21837404002E905F /* Strings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Strings.plist; sourceTree = "<group>"; };
+		719A923C2183A242002E905F /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		71F3EFAA2118B3AF00454D71 /* movieroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F3EFB22118B3AF00454D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,8 +174,6 @@
 				71110D512183445D003963FD /* repository */,
 				7142BDFD211B37DA0081D58A /* Urls.swift */,
 				7197256A211B6DBD004DD742 /* Headers.swift */,
-				71110D4D217FBEDC003963FD /* UserSettings.swift */,
-				71110D4F217FBEEB003963FD /* IUserSettings.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -222,12 +224,27 @@
 		7197256C211B6EBA004DD742 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				71110D4D217FBEDC003963FD /* UserSettings.swift */,
+				71110D4F217FBEEB003963FD /* IUserSettings.swift */,
 				7197256D211B6ED7004DD742 /* Spinner.swift */,
 				7197257D211DCE29004DD742 /* Utils.swift */,
 				7197257F211DDB79004DD742 /* ImageViewHelper.swift */,
 				71244E682122163800A70D39 /* SharedPref.swift */,
+				719A923C2183A242002E905F /* Strings.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		719A92392183739A002E905F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */,
+				71F3EFB12118B3AF00454D71 /* Main.storyboard */,
+				71F3EFB42118B3AF00454D71 /* Assets.xcassets */,
+				71F3EFB62118B3AF00454D71 /* LaunchScreen.storyboard */,
+				719A923A21837404002E905F /* Strings.plist */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		71F3EFA12118B3AE00454D71 = {
@@ -255,15 +272,12 @@
 		71F3EFAC2118B3AF00454D71 /* movieroll */ = {
 			isa = PBXGroup;
 			children = (
+				71F3EFB92118B3AF00454D71 /* Info.plist */,
+				7110368C211B25050024D1C3 /* api */,
+				719A92392183739A002E905F /* resources */,
 				7197256C211B6EBA004DD742 /* helpers */,
 				7110368E211B25310024D1C3 /* controllers */,
 				7110368D211B251C0024D1C3 /* models */,
-				7110368C211B25050024D1C3 /* api */,
-				71F3EFAD2118B3AF00454D71 /* AppDelegate.swift */,
-				71F3EFB12118B3AF00454D71 /* Main.storyboard */,
-				71F3EFB42118B3AF00454D71 /* Assets.xcassets */,
-				71F3EFB62118B3AF00454D71 /* LaunchScreen.storyboard */,
-				71F3EFB92118B3AF00454D71 /* Info.plist */,
 			);
 			path = movieroll;
 			sourceTree = "<group>";
@@ -443,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F3EFB82118B3AF00454D71 /* LaunchScreen.storyboard in Resources */,
+				719A923B21837404002E905F /* Strings.plist in Resources */,
 				71F3EFB52118B3AF00454D71 /* Assets.xcassets in Resources */,
 				71F3EFB32118B3AF00454D71 /* Main.storyboard in Resources */,
 			);
@@ -558,6 +573,7 @@
 				71F3EFAE2118B3AF00454D71 /* AppDelegate.swift in Sources */,
 				71244E692122163800A70D39 /* SharedPref.swift in Sources */,
 				7142BDFE211B37DA0081D58A /* Urls.swift in Sources */,
+				719A923D2183A242002E905F /* Strings.swift in Sources */,
 				E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */,
 				71972578211CD190004DD742 /* VideoModel.swift in Sources */,
 				71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */,
