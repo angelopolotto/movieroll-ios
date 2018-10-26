@@ -4,6 +4,10 @@
 <dict>
 	<key>genres</key>
 	<dict>
+		<key>section_tv</key>
+		<string>Tv</string>
+		<key>section_movie</key>
+		<string>Movies</string>
 		<key>dialog_title</key>
 		<string>Choose your language</string>
 		<key>dialog_message</key>

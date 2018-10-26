@@ -20,6 +20,10 @@ class UserSettings: IUserSettings {
         SharedPref.write(key: "selected_language", value: (language.toJSONString())!)
     }
     
+    func getLanguages() -> LanguageModel? {
+        return LanguageModel(JSONString: SharedPref.read(key: "selected_language")) ?? nil
+    }
+    
     func saveGenre(isMovie: Bool, genre: GenreModel) {
         self.isMovie = isMovie
         self.genre = genre

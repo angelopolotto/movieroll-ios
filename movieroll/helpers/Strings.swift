@@ -7,16 +7,6 @@
 //
 import Foundation
 
-func readString(_ path: String) -> String {
-    if let path = Bundle.main.path(forResource: "Strings", ofType: "plist") {
-        let dictRoot = NSDictionary(contentsOfFile: path)
-        if let dict = dictRoot {
-            return dict[path] as! String
-        }
-    }
-    return ""
-}
-
 public class Strings: PropertyList {
     public var name: String
     public var bundle: Bundle
@@ -26,7 +16,6 @@ public class Strings: PropertyList {
         self.name = name
         self.bundle = bundle
     }
-
 }
 
 

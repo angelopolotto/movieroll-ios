@@ -26,9 +26,13 @@ class GenresPresenter: GenresPresenterContract {
     }
     
     func retrieveLanguages() {
-        repository.loadLanguages() { (languages) -> () in
-                self.languages = languages
-                self.view.showDialoag(languages: languages)
+        if let language = userSettings.getLanguages() {
+            self.selectedLanguage(language: language)
+        } else {
+            repository.loadLanguages() { (languages) -> () in
+                    self.languages = languages
+                    self.view.showDialoag(languages: languages)
+            }
         }
     }
     

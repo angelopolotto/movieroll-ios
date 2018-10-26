@@ -193,10 +193,10 @@
 		7110368E211B25310024D1C3 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E849F772C963D08A05AD0FF2 /* genres */,
 				E849FC8332137061F4E6AEA1 /* discover */,
 				E849F2FC27D176F67253A2AC /* login */,
 				E849F55C308BBCA6D15DA667 /* register */,
-				E849F772C963D08A05AD0FF2 /* genres */,
 				E849FF2992FCE5845BEA4895 /* base */,
 			);
 			path = controllers;

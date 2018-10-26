@@ -32,9 +32,9 @@ class GenresViewController: BaseTableViewController, GenresViewContract {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
             case 0:
-                return "Movies"
+                return Strings.shared.value(forKey: "genres.section_movie")
             default:
-                return "TV"
+                return Strings.shared.value(forKey: "genres.section_tv")
         }
     }
 
