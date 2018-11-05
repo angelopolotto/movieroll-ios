@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>genres</key>
+	<dict>
+		<key>section_tv</key>
+		<string>Tv</string>
+		<key>section_movie</key>
+		<string>Movies</string>
+		<key>dialog_title</key>
+		<string>Choose your language</string>
+		<key>dialog_message</key>
+		<string>The language preference to retrieve info about the movies</string>
+	</dict>
+</dict>
+</plist>
