@@ -16,8 +16,11 @@ class DiscoverViewController: BaseTableViewController, DiscoverContractView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        presenter = DiscoverPresenter(view: self, repository: Repository(view: self), userSettings: UserSettings.shared)
+        
+        Repository.shared.view = self
+        presenter = DiscoverPresenter(view: self,
+                                      repository: Repository.shared,
+                                      userSettings: UserSettings.shared)
 
         presenter?.retrieveDiscover()
 

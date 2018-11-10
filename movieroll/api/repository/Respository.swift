@@ -8,11 +8,11 @@ import Alamofire
 import AlamofireObjectMapper
 
 class Repository: IRepository {
-    private var view: BaseViewContract
-
-    init(view: BaseViewContract) {
-        self.view = view
-    }
+    var view: BaseViewContract!
+    
+    static let shared = Repository()
+    
+    private init() {}
     
     func loadLanguages(callback: @escaping (_ languages: [LanguageModel]) -> ()) {
         // https://blog.faodailtechnology.com/how-to-use-alamofireobjectmapper-c0d9820779bf
@@ -117,5 +117,151 @@ class Repository: IRepository {
                     print(error)
                 }
         }
+    }
+    
+    func login(email: String, password: String, callback: @escaping (LoginModel) -> ()) {
+        view.showProgress()
+        
+        let parameters: Parameters = [
+            "email": email,
+            "password": password
+        ]
+        
+        Alamofire.request(Urls.Login, method: .post, parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: Headers.NoAuth)
+            .responseObject {
+                (response: DataResponse<LoginModel>) in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    Headers.tokenPrivateAuth = (response.result.value?.token)!
+                    callback(response.result.value!)
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
+    }
+    
+    func register(name:String,  password: String, email: String,
+                  language:String, region:String, theme: String,
+                  callback: @escaping (LoginModel) -> ()) {
+        view.showProgress()
+        
+        let parameters: Parameters = [
+            "name": name,
+            "password": password,
+            "email": email,
+            "language": language,
+            "region": region,
+            "theme": theme
+        ]
+        
+        Alamofire.request(Urls.Register, method: .post, parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: Headers.NoAuth)
+            .responseObject {
+                (response: DataResponse<LoginModel>) in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    Headers.tokenPrivateAuth = (response.result.value?.token)!
+                    callback(response.result.value!)
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
+    }
+    
+    func refresh(token: String, callback: @escaping (_ response: String) -> ()) {
+        view.showProgress()
+        
+        //show the loading dialog to user
+        self.view.showProgress()
+        
+        let parameters: Parameters = [
+            "token": token
+        ]
+        Alamofire.request(Urls.Refresh, method: .post, parameters: parameters,
+                          encoding: JSONEncoding.default, headers: Headers.NoAuth)
+            .responseJSON { response in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    let jsonResponse = response.result.value as! NSDictionary
+                    if jsonResponse["token"] != nil {
+                        Headers.tokenPrivateAuth = String(describing: jsonResponse["token"]!)
+                        print(Headers.tokenPrivateAuth)
+                        callback(jsonResponse["token"]! as! String)
+                    }
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                }
+        }
+    }
+    
+    func favoritesAdd(media_id: String, callback: @escaping (_ response: String?) -> ()) {
+        view.showProgress()
+        
+        Alamofire.request(Urls.Favorites + media_id,
+                          method: .post,
+                          headers: Headers.AuthPrivate)
+            .responseJSON {
+                (response) in
+                let jsonResponse = response.result.value as! NSDictionary
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    let message = jsonResponse["message"] as? String
+                    if message != nil {
+                        callback(message)
+                    }
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
+    }
+    
+    func favoritesList(callback: @escaping ([DiscoverItemModel]?) -> ()) {
+        view.showProgress()
+        Alamofire.request(Urls.Favorites,
+                          method: .get,
+                          headers: Headers.AuthPrivate)
+            .responseArray {
+                (response: DataResponse<[DiscoverItemModel]>) in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    callback(response.result.value!)
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
+    }
+    
+    func favoritesWatched(callback: @escaping ([DiscoverItemModel]?) -> ()) {
+        view.showProgress()
+        Alamofire.request(Urls.Favorites,
+                          method: .get,
+                          headers: Headers.AuthPrivate)
+            .responseArray {
+                (response: DataResponse<[DiscoverItemModel]>) in
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    callback(response.result.value!)
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
+    }
+    
+    func favoritesDelete(media_id: String, callback: @escaping (String?) -> ()) {
+        <#code#>
     }
 }

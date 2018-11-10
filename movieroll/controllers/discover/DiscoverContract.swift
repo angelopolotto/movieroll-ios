@@ -5,10 +5,11 @@
 
 import Foundation
 
-protocol DiscoverContractView {
+protocol DiscoverContractView: BaseViewContract {
     func loadContent(result: [DiscoverItemModel]?)
 }
 
 protocol DiscoverContractPresenter {
     func retrieveDiscover()
+    func addToList()
 }

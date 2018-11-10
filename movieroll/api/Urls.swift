@@ -45,6 +45,22 @@ struct Urls {
         return BaseURL + "discover/tv"
     }
     
+    static var Login: String {
+        return BaseURL + "auth/login"
+    }
+    
+    static var Register: String {
+        return BaseURL + "auth/register"
+    }
+    
+    static var Refresh: String {
+        return BaseURL + "auth/refreshToken"
+    }
+    
+    static var Favorites: String {
+        return BaseURL + "favorites/"
+    }
+    
     static func MediaImage(_ path: String) -> String {
         return "http://image.tmdb.org/t/p/w185" + path
     }

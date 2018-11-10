@@ -24,4 +24,18 @@ class DiscoverPresenter: DiscoverContractPresenter {
                                     self.view.loadContent(result: self.discovered?.result)
         }
     }
+    
+    func addToList(_id: String) {
+        let login = self.userSettings.getLogin()
+        if (login != nil) {
+            self.repository.refresh(token: login!.token!, callback: { token in
+                login?.token = token
+                self.userSettings.saveLogin(loginModel: login!)
+                self.repository.add
+                self.view.showMessage(message: Strings.shared.value(forKey: ""))
+            })
+        } else {
+            
+        }
+    }
 }

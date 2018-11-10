@@ -15,10 +15,17 @@ struct Headers {
     ]
     
     public static var token: String = ""
+    public static var tokenPrivateAuth: String = ""
     
     public static let AuthPublic = [
         "Content-Type":"application/json",
         "Accept": "application/json",
         "Authorization": String(format: "Bearer %@", token)
+    ]
+    
+    public static let AuthPrivate = [
+        "Content-Type":"application/json",
+        "Accept": "application/json",
+        "Authorization": String(format: "Bearer %@", tokenPrivateAuth)
     ]
 }

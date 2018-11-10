@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>discover</key>
+	<dict>
+		<key>added</key>
+		<string>Movie added to the favorite list.</string>
+	</dict>
+	<key>base</key>
+	<dict>
+		<key>info</key>
+		<string>Information</string>
+		<key>error</key>
+		<string>Error</string>
+		<key>ok</key>
+		<string>Ok</string>
+	</dict>
 	<key>genres</key>
 	<dict>
 		<key>section_tv</key>

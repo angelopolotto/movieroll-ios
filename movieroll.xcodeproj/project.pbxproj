@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3C919D1E8AC5785EA14E253B /* Pods_movierollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93117A5A6FEFB49806D1D30A /* Pods_movierollUITests.framework */; };
+		7101B12F21975B6700D94F4A /* RegisterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B12E21975B6700D94F4A /* RegisterContract.swift */; };
+		7101B13121975B7B00D94F4A /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B13021975B7B00D94F4A /* RegisterPresenter.swift */; };
 		71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D49217FBBBE003963FD /* GenresContract.swift */; };
 		71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4B217FBC51003963FD /* GenresPresenter.swift */; };
 		71110D4E217FBEDC003963FD /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4D217FBEDC003963FD /* UserSettings.swift */; };
 		71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4F217FBEEB003963FD /* IUserSettings.swift */; };
 		71244E692122163800A70D39 /* SharedPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71244E682122163800A70D39 /* SharedPref.swift */; };
 		7142BDFE211B37DA0081D58A /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7142BDFD211B37DA0081D58A /* Urls.swift */; };
+		718C333F21971A8D002FBFF0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C333E21971A8D002FBFF0 /* LoginPresenter.swift */; };
+		718C334121971AA2002FBFF0 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C334021971AA2002FBFF0 /* LoginContract.swift */; };
+		718C334321973F25002FBFF0 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C334221973F25002FBFF0 /* LoginModel.swift */; };
 		71972569211B62B4004DD742 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972568211B62B4004DD742 /* LanguageModel.swift */; };
 		7197256B211B6DBD004DD742 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256A211B6DBD004DD742 /* Headers.swift */; };
 		7197256E211B6ED7004DD742 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256D211B6ED7004DD742 /* Spinner.swift */; };
@@ -68,12 +73,17 @@
 		345228276BFE7B4B5D648B04 /* Pods-movieroll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.release.xcconfig"; sourceTree = "<group>"; };
 		3B67CAA82774643B2E6029B2 /* Pods-movierollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.release.xcconfig"; sourceTree = "<group>"; };
 		6783A257E150AA1A6287184F /* Pods-movieroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.debug.xcconfig"; sourceTree = "<group>"; };
+		7101B12E21975B6700D94F4A /* RegisterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContract.swift; sourceTree = "<group>"; };
+		7101B13021975B7B00D94F4A /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		71110D49217FBBBE003963FD /* GenresContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresContract.swift; sourceTree = "<group>"; };
 		71110D4B217FBC51003963FD /* GenresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPresenter.swift; sourceTree = "<group>"; };
 		71110D4D217FBEDC003963FD /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		71110D4F217FBEEB003963FD /* IUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSettings.swift; sourceTree = "<group>"; };
 		71244E682122163800A70D39 /* SharedPref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPref.swift; sourceTree = "<group>"; };
 		7142BDFD211B37DA0081D58A /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		718C333E21971A8D002FBFF0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		718C334021971AA2002FBFF0 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		718C334221973F25002FBFF0 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		71972568211B62B4004DD742 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		7197256A211B6DBD004DD742 /* Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
 		7197256D211B6ED7004DD742 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 				71972575211CCEE2004DD742 /* DiscoverItemModel.swift */,
 				71972577211CD190004DD742 /* VideoModel.swift */,
 				71972573211CCED4004DD742 /* DiscoverModel.swift */,
+				718C334221973F25002FBFF0 /* LoginModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -274,10 +285,10 @@
 			children = (
 				71F3EFB92118B3AF00454D71 /* Info.plist */,
 				7110368C211B25050024D1C3 /* api */,
+				7110368D211B251C0024D1C3 /* models */,
 				719A92392183739A002E905F /* resources */,
 				7197256C211B6EBA004DD742 /* helpers */,
 				7110368E211B25310024D1C3 /* controllers */,
-				7110368D211B251C0024D1C3 /* models */,
 			);
 			path = movieroll;
 			sourceTree = "<group>";
@@ -304,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				E849F18495BD932EE87CA029 /* LoginViewController.swift */,
+				718C333E21971A8D002FBFF0 /* LoginPresenter.swift */,
+				718C334021971AA2002FBFF0 /* LoginContract.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -312,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */,
+				7101B12E21975B6700D94F4A /* RegisterContract.swift */,
+				7101B13021975B7B00D94F4A /* RegisterPresenter.swift */,
 			);
 			path = register;
 			sourceTree = "<group>";
@@ -570,9 +585,11 @@
 				7197257E211DCE29004DD742 /* Utils.swift in Sources */,
 				71972576211CCEE2004DD742 /* DiscoverItemModel.swift in Sources */,
 				71972569211B62B4004DD742 /* LanguageModel.swift in Sources */,
+				7101B12F21975B6700D94F4A /* RegisterContract.swift in Sources */,
 				71F3EFAE2118B3AF00454D71 /* AppDelegate.swift in Sources */,
 				71244E692122163800A70D39 /* SharedPref.swift in Sources */,
 				7142BDFE211B37DA0081D58A /* Urls.swift in Sources */,
+				718C334121971AA2002FBFF0 /* LoginContract.swift in Sources */,
 				719A923D2183A242002E905F /* Strings.swift in Sources */,
 				E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */,
 				71972578211CD190004DD742 /* VideoModel.swift in Sources */,
@@ -582,11 +599,14 @@
 				E849F6C0F561ECC13B9380A9 /* DiscoverViewController.swift in Sources */,
 				E849FAD31C67BF516C96AD69 /* LoginViewController.swift in Sources */,
 				E849F00DC74CF4CC870BD80E /* RegisterViewController.swift in Sources */,
+				7101B13121975B7B00D94F4A /* RegisterPresenter.swift in Sources */,
 				71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */,
+				718C334321973F25002FBFF0 /* LoginModel.swift in Sources */,
 				71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */,
 				E849FFD0B925A523EF490B93 /* TraillerViewCell.swift in Sources */,
 				E849F9E96A92084B851252D4 /* GenresViewController.swift in Sources */,
 				E849F36A4CC165F9ADBDBF16 /* DiscoverContract.swift in Sources */,
+				718C333F21971A8D002FBFF0 /* LoginPresenter.swift in Sources */,
 				E849F84727797EDDCB7ED23F /* BaseViewContract.swift in Sources */,
 				E849FCB40A46F6DA873DF17F /* BaseViewController.swift in Sources */,
 				E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */,
