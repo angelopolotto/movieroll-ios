@@ -28,6 +28,6 @@ class LoginViewController: BaseViewController, LoginContractView {
     }
     
     func showDiscover() {
-        
+        navigationController?.popViewController(animated: true)
     }
 }

@@ -25,6 +25,7 @@ class LoginPresenter: LoginContractPresenter {
             (loginModel) in
             self.loginModel = loginModel
             self.userSettings.saveLogin(loginModel: loginModel)
+            self.view.showDiscover()
         }
     }
 }

@@ -14,6 +14,8 @@ class DiscoverViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     var homepage: String = ""
     var imdb: String = ""
     var traillersList: [VideoModel] = []
+    var media_id: Int?
+    var presenter: DiscoverContractPresenter?
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var title: UILabel!
@@ -26,15 +28,15 @@ class DiscoverViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     @IBOutlet weak var traillers: UICollectionView!
     
     @IBAction func officialPage(_ sender: UIButton) {
-        openURL(url: self.homepage)
+        presenter?.resolveUrl(url: self.homepage)
     }
     
     @IBAction func imdb(_ sender: UIButton) {
-        openURL(url: self.imdb)
+        presenter?.resolveUrl(url: self.imdb)
     }
     
     @IBAction func addToList(_ sender: UIButton) {
-//        LoginSegue
+        presenter?.addToList(media_id: self.media_id!)
     }
     
     override func awakeFromNib() {
@@ -67,6 +69,6 @@ class DiscoverViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        openURL(url: self.traillersList[indexPath.row].link ?? "")
+        presenter?.resolveUrl(url: self.traillersList[indexPath.row].link ?? "")
     }
 }

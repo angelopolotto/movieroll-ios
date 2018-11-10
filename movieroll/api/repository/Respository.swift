@@ -204,7 +204,6 @@ class Repository: IRepository {
     
     func favoritesAdd(media_id: String, callback: @escaping (_ response: String?) -> ()) {
         view.showProgress()
-        
         Alamofire.request(Urls.Favorites + media_id,
                           method: .post,
                           headers: Headers.AuthPrivate)
@@ -245,7 +244,7 @@ class Repository: IRepository {
     
     func favoritesWatched(callback: @escaping ([DiscoverItemModel]?) -> ()) {
         view.showProgress()
-        Alamofire.request(Urls.Favorites,
+        Alamofire.request(Urls.FavoritesWatched,
                           method: .get,
                           headers: Headers.AuthPrivate)
             .responseArray {
@@ -262,6 +261,24 @@ class Repository: IRepository {
     }
     
     func favoritesDelete(media_id: String, callback: @escaping (String?) -> ()) {
-        <#code#>
+        view.showProgress()
+        Alamofire.request(Urls.Favorites + media_id,
+                          method: .delete,
+                          headers: Headers.AuthPrivate)
+            .responseJSON {
+                (response) in
+                let jsonResponse = response.result.value as! NSDictionary
+                self.view.hideProgress()
+                switch response.result {
+                case .success:
+                    let message = jsonResponse["message"] as? String
+                    if message != nil {
+                        callback(message)
+                    }
+                case .failure(let error):
+                    self.view.showError(message: error.localizedDescription)
+                    print(error)
+                }
+        }
     }
 }

@@ -60,8 +60,18 @@ class DiscoverViewController: BaseTableViewController, DiscoverContractView {
         cell.traillersList = media.videos ?? []
         cell.homepage = media.homepage ?? Urls.IMDB
         cell.imdb = media.imdb ?? Urls.IMDB
+        cell.presenter = self.presenter
+        cell.media_id = media.media_id
         cell.traillers.reloadData()
+        
         return cell
     }
 
+    func showLogin() {
+        performSegue(withIdentifier: "LoginSegue", sender: self)
+    }
+    
+    func resolveUrl(url: String) {
+        openURL(url: url)
+    }
 }

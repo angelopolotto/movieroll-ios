@@ -25,17 +25,23 @@ class DiscoverPresenter: DiscoverContractPresenter {
         }
     }
     
-    func addToList(_id: String) {
+    func addToList(media_id: Int) {
         let login = self.userSettings.getLogin()
         if (login != nil) {
             self.repository.refresh(token: login!.token!, callback: { token in
                 login?.token = token
                 self.userSettings.saveLogin(loginModel: login!)
-                self.repository.add
-                self.view.showMessage(message: Strings.shared.value(forKey: ""))
+                self.repository.favoritesAdd(media_id: media_id.description) {
+                    message in
+                    self.view.showMessage(message: Strings.shared.value(forKey: "discover.added"))
+                }
             })
         } else {
-            
+            view.showLogin()
         }
+    }
+    
+    func resolveUrl(url: String) {
+        view.resolveUrl(url: url)
     }
 }

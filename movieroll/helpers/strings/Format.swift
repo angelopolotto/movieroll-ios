@@ -12,9 +12,3 @@ import UIKit
 func formatFloat(number: Float) -> String {
     return String(describing: number)
 }
-
-func openURL(url: String) {
-    if let link = URL(string: url) {
-        UIApplication.shared.open(link)
-    }
-}

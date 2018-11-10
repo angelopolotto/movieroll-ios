@@ -61,6 +61,10 @@ struct Urls {
         return BaseURL + "favorites/"
     }
     
+    static var FavoritesWatched: String {
+        return BaseURL + "favorites/watched"
+    }
+    
     static func MediaImage(_ path: String) -> String {
         return "http://image.tmdb.org/t/p/w185" + path
     }
