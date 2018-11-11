@@ -10,21 +10,31 @@ import Foundation
 
 class RegisterPresenter: RegisterContractPresenter {
     let view: RegisterContractView
-    let repository: IRepository
-    let userSettings: IUserSettings
+    let repository: RepositoryContract
+    let userSettings: UserSettingsContract
+    let validators: ValidatorsContract
     
     func register(name: String, password: String, email: String, language: String,
                   region: String, theme: String) {
-        repository.register(name: name, password: password, email: email, language: language, region: region, theme: theme, callback: {
+        if validators.isValidName(text: name, onError: { message in view.nameError(message)})
+            &&
+            validators.isValidPassword(text: password, onError: {message in view.passwordError(message)})
+            &&
+            validators.isValidEmail(text: email, onError: {message in view.emailError(message)})
+        {
+            
+            repository.register(name: name, password: password, email: email, language: language, region: region, theme: theme, callback: {
                 (register) in
-                    self.userSettings.saveLogin(loginModel: register)
-                    self.view.showDiscover()
+                self.userSettings.saveLogin(loginModel: register)
+                self.view.showDiscover()
             })
+        }
     }
     
-    init(view: RegisterContractView, repository: IRepository, userSettings: IUserSettings) {
+    init(view: RegisterContractView, repository: RepositoryContract, userSettings: UserSettingsContract, validators: ValidatorsContract) {
         self.view = view
         self.repository = repository
         self.userSettings = userSettings
+        self.validators = validators
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserSettings: IUserSettings {
+class UserSettings: UserSettingsContract {
     static let shared = UserSettings()
     
     var isMovie: Bool?

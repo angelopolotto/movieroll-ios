@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class Repository: IRepository {
+class Repository: RepositoryContract {
     var view: BaseViewContract!
     
     static let shared = Repository()
@@ -203,14 +203,14 @@ class Repository: IRepository {
     }
     
     func favoritesAdd(media_id: String, callback: @escaping (_ response: String?) -> ()) {
-        view.showProgress()
+//        view.showProgress()
         Alamofire.request(Urls.Favorites + media_id,
                           method: .post,
                           headers: Headers.AuthPrivate)
             .responseJSON {
                 (response) in
                 let jsonResponse = response.result.value as! NSDictionary
-                self.view.hideProgress()
+//                self.view.hideProgress()
                 switch response.result {
                 case .success:
                     let message = jsonResponse["message"] as? String

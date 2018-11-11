@@ -10,22 +10,32 @@ import Foundation
 
 class LoginPresenter: LoginContractPresenter {
     let view: LoginContractView!
-    let repository: IRepository
-    let userSettings: IUserSettings
+    let repository: RepositoryContract
+    let userSettings: UserSettingsContract
+    let validators: ValidatorsContract
     var loginModel: LoginModel?
     
-    init(view: LoginContractView, repository: IRepository, userSettings: IUserSettings) {
+    init(view: LoginContractView, repository: RepositoryContract, userSettings: UserSettingsContract, validators: ValidatorsContract) {
         self.view = view
         self.repository = repository
         self.userSettings = userSettings
+        self.validators = validators
     }
     
     func requestLogin(email: String, password: String) {
-        self.repository.login(email: email, password: password) {
-            (loginModel) in
-            self.loginModel = loginModel
-            self.userSettings.saveLogin(loginModel: loginModel)
-            self.view.showDiscover()
+        if
+            validators.isValidEmail(text: email, onError: {message in self.view.emailError(message)} )
+            &&
+            validators.isValidPassword(text: password, onError: {message in self.view.passwordError(message)} )
+        {
+            view.emailErrorHide()
+            view.passwordErrorHide()
+            self.repository.login(email: email, password: password) {
+                (loginModel) in
+                self.loginModel = loginModel
+                self.userSettings.saveLogin(loginModel: loginModel)
+                self.view.showDiscover()
+            }
         }
     }
 }

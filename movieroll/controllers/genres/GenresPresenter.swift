@@ -10,8 +10,8 @@ import Foundation
 
 class GenresPresenter: GenresPresenterContract {
     var view: GenresViewContract
-    var repository: IRepository
-    var userSettings: IUserSettings
+    var repository: RepositoryContract
+    var userSettings: UserSettingsContract
     var languages: [LanguageModel]?
     var selectedLanguage: LanguageModel?
     private var movieGenres: [GenreModel] = []
@@ -19,7 +19,7 @@ class GenresPresenter: GenresPresenterContract {
     private var selectedGenre: GenreModel?
     private var isMovie: Bool = false
     
-    init(view: GenresViewContract, repository: IRepository, userSettings: IUserSettings) {
+    init(view: GenresViewContract, repository: RepositoryContract, userSettings: UserSettingsContract) {
         self.view = view
         self.repository = repository
         self.userSettings = userSettings

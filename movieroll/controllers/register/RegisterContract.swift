@@ -10,6 +10,12 @@ import Foundation
 
 protocol RegisterContractView {
     func showDiscover()
+    func nameError(_ message: String)
+    func emailError(_ message: String)
+    func passwordError(_ message: String)
+    func nameErrorHide()
+    func emailErrorHide()
+    func passwordErrorHide()
 }
 
 protocol RegisterContractPresenter {

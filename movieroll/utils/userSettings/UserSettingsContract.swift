@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol IUserSettings {
+protocol UserSettingsContract {
     func getLanguages() -> LanguageModel?
     func saveLanguage(language: LanguageModel)
     func saveGenre(isMovie: Bool, genre: GenreModel)

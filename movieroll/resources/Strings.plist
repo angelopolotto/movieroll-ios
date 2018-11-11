@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>errors</key>
+	<dict>
+		<key>required</key>
+		<string>You must enter a value</string>
+		<key>generic</key>
+		<string>Something went wrong, please, try again</string>
+		<key>name</key>
+		<string>Not a valid name, min 3 characters</string>
+		<key>password</key>
+		<string>Not a valid password, min 6 characters</string>
+		<key>email</key>
+		<string>Insert a valid email</string>
+	</dict>
 	<key>discover</key>
 	<dict>
 		<key>added</key>

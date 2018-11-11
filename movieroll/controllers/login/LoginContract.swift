@@ -10,6 +10,10 @@ import Foundation
 
 protocol LoginContractView {
     func showDiscover()
+    func emailErrorHide()
+    func passwordErrorHide()
+    func emailError(_ message: String)
+    func passwordError(_ message: String)
 }
 
 protocol LoginContractPresenter {

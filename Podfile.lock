@@ -4,22 +4,26 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
   - ObjectMapper (3.3.0)
+  - Validator (3.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.0)
+  - Validator (= 3.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
     - ObjectMapper
+    - Validator
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: 078314789d0668dee4fdd8d7bfc73d821aa54ab7
+PODFILE CHECKSUM: bd2a6c634e6a19ea91b8d1f363dbeebdf8a14286
 
 COCOAPODS: 1.5.3

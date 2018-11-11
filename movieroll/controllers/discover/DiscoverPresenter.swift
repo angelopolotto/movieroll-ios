@@ -7,11 +7,11 @@ import Foundation
 
 class DiscoverPresenter: DiscoverContractPresenter {
     private var view: DiscoverContractView
-    private var repository: IRepository
-    private var userSettings: IUserSettings
+    private var repository: RepositoryContract
+    private var userSettings: UserSettingsContract
     private var discovered: DiscoverModel? = nil
 
-    init(view: DiscoverContractView, repository: IRepository, userSettings: IUserSettings) {
+    init(view: DiscoverContractView, repository: RepositoryContract, userSettings: UserSettingsContract) {
         self.view = view
         self.repository = repository
         self.userSettings = userSettings

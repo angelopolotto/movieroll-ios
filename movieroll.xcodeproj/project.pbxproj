@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C919D1E8AC5785EA14E253B /* Pods_movierollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93117A5A6FEFB49806D1D30A /* Pods_movierollUITests.framework */; };
+		2D20600697A054BA14BABCEB /* Pods_movierollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B499EA68677557B3617A764F /* Pods_movierollTests.framework */; };
 		7101B12F21975B6700D94F4A /* RegisterContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B12E21975B6700D94F4A /* RegisterContract.swift */; };
 		7101B13121975B7B00D94F4A /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B13021975B7B00D94F4A /* RegisterPresenter.swift */; };
 		7101B1332197801D00D94F4A /* OpenUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B1322197801D00D94F4A /* OpenUrl.swift */; };
-		7101B13B2197824F00D94F4A /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B13A2197824F00D94F4A /* Regex.swift */; };
+		7101B13B2197824F00D94F4A /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7101B13A2197824F00D94F4A /* Validators.swift */; };
 		71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D49217FBBBE003963FD /* GenresContract.swift */; };
 		71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4B217FBC51003963FD /* GenresPresenter.swift */; };
 		71110D4E217FBEDC003963FD /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4D217FBEDC003963FD /* UserSettings.swift */; };
-		71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4F217FBEEB003963FD /* IUserSettings.swift */; };
+		71110D50217FBEEB003963FD /* UserSettingsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71110D4F217FBEEB003963FD /* UserSettingsContract.swift */; };
 		71244E692122163800A70D39 /* SharedPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71244E682122163800A70D39 /* SharedPref.swift */; };
 		7142BDFE211B37DA0081D58A /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7142BDFD211B37DA0081D58A /* Urls.swift */; };
 		718C333F21971A8D002FBFF0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C333E21971A8D002FBFF0 /* LoginPresenter.swift */; };
@@ -37,11 +37,11 @@
 		71F3EFB82118B3AF00454D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71F3EFB62118B3AF00454D71 /* LaunchScreen.storyboard */; };
 		71F3EFC32118B3AF00454D71 /* movierollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFC22118B3AF00454D71 /* movierollTests.swift */; };
 		71F3EFCE2118B3AF00454D71 /* movierollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F3EFCD2118B3AF00454D71 /* movierollUITests.swift */; };
-		78ADEC500DF7D9A8BE63747F /* Pods_movierollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6CE8E155BBD2F51A2AAAB4 /* Pods_movierollTests.framework */; };
+		BAA5D217CA868277B75C147A /* Pods_movierollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F41205181D6AC4AE8A7414E /* Pods_movierollUITests.framework */; };
 		E849F00DC74CF4CC870BD80E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */; };
 		E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FBB74ACC25A41721F9EA /* DiscoverPresenter.swift */; };
 		E849F36A4CC165F9ADBDBF16 /* DiscoverContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FE30DEB4CA18175427E7 /* DiscoverContract.swift */; };
-		E849F3E997316FDA81FBC5FA /* IRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FABF4D8BA465B2B2D75B /* IRepository.swift */; };
+		E849F3E997316FDA81FBC5FA /* RepositoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FABF4D8BA465B2B2D75B /* RepositoryContract.swift */; };
 		E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F0F7AD7002097F15DAF5 /* GenreModel.swift */; };
 		E849F6C0F561ECC13B9380A9 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F7FF3334CF4174F8F3CF /* DiscoverViewController.swift */; };
 		E849F750EF98EFA2815D22C6 /* Respository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849FFD67FF1AE67B5464917 /* Respository.swift */; };
@@ -51,7 +51,7 @@
 		E849FCB40A46F6DA873DF17F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F445A7B64D189981037B /* BaseViewController.swift */; };
 		E849FECFBC050FD887D608E5 /* DiscoverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F729853B893D8EF4A40C /* DiscoverViewCell.swift */; };
 		E849FFD0B925A523EF490B93 /* TraillerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */; };
-		EF0557A1E1F6750C06D1DC44 /* Pods_movieroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851E330660E30DD31911ED7A /* Pods_movieroll.framework */; };
+		F5511A4D84C0C4D7FD103628 /* Pods_movieroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9366E4871139B649A861DC65 /* Pods_movieroll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,17 +72,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		345228276BFE7B4B5D648B04 /* Pods-movieroll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.release.xcconfig"; sourceTree = "<group>"; };
-		3B67CAA82774643B2E6029B2 /* Pods-movierollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.release.xcconfig"; sourceTree = "<group>"; };
-		6783A257E150AA1A6287184F /* Pods-movieroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.debug.xcconfig"; sourceTree = "<group>"; };
+		0FD79E20A4DF5D06784FE10A /* Pods-movierollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F41205181D6AC4AE8A7414E /* Pods_movierollUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movierollUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7101B12E21975B6700D94F4A /* RegisterContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterContract.swift; sourceTree = "<group>"; };
 		7101B13021975B7B00D94F4A /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		7101B1322197801D00D94F4A /* OpenUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenUrl.swift; sourceTree = "<group>"; };
-		7101B13A2197824F00D94F4A /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		7101B13A2197824F00D94F4A /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		71110D49217FBBBE003963FD /* GenresContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresContract.swift; sourceTree = "<group>"; };
 		71110D4B217FBC51003963FD /* GenresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPresenter.swift; sourceTree = "<group>"; };
 		71110D4D217FBEDC003963FD /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		71110D4F217FBEEB003963FD /* IUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUserSettings.swift; sourceTree = "<group>"; };
+		71110D4F217FBEEB003963FD /* UserSettingsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsContract.swift; sourceTree = "<group>"; };
 		71244E682122163800A70D39 /* SharedPref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPref.swift; sourceTree = "<group>"; };
 		7142BDFD211B37DA0081D58A /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		718C333E21971A8D002FBFF0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -110,11 +109,11 @@
 		71F3EFC92118B3AF00454D71 /* movierollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movierollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F3EFCD2118B3AF00454D71 /* movierollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movierollUITests.swift; sourceTree = "<group>"; };
 		71F3EFCF2118B3AF00454D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		851E330660E30DD31911ED7A /* Pods_movieroll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieroll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89C81D3E19A7872E2E96BB1A /* Pods-movierollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movierollUITests/Pods-movierollUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		93117A5A6FEFB49806D1D30A /* Pods_movierollUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movierollUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A6CE8E155BBD2F51A2AAAB4 /* Pods_movierollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movierollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A34AAE2BA4D2BDA90C18D86F /* Pods-movierollUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollUITests/Pods-movierollUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9366E4871139B649A861DC65 /* Pods_movieroll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieroll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4C1449DF6D9958E9F833CAC /* Pods-movierollTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.release.xcconfig"; sourceTree = "<group>"; };
+		B2709EBD8611039E2D447890 /* Pods-movieroll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.debug.xcconfig"; sourceTree = "<group>"; };
+		B499EA68677557B3617A764F /* Pods_movierollTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movierollTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84E5989C6436A70BCF9CF28 /* Pods-movieroll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieroll.release.xcconfig"; path = "Pods/Target Support Files/Pods-movieroll/Pods-movieroll.release.xcconfig"; sourceTree = "<group>"; };
 		E849F0F7AD7002097F15DAF5 /* GenreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreModel.swift; sourceTree = "<group>"; };
 		E849F18495BD932EE87CA029 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E849F3115EE570EE7F28AA25 /* TraillerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraillerViewCell.swift; sourceTree = "<group>"; };
@@ -122,13 +121,14 @@
 		E849F686E6924CF85882EE42 /* GenresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		E849F729853B893D8EF4A40C /* DiscoverViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewCell.swift; sourceTree = "<group>"; };
 		E849F7FF3334CF4174F8F3CF /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		E849FABF4D8BA465B2B2D75B /* IRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRepository.swift; sourceTree = "<group>"; };
+		E849FABF4D8BA465B2B2D75B /* RepositoryContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryContract.swift; sourceTree = "<group>"; };
 		E849FBB74ACC25A41721F9EA /* DiscoverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
 		E849FCF8652ECB629B3FDD29 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E849FE30DEB4CA18175427E7 /* DiscoverContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverContract.swift; sourceTree = "<group>"; };
 		E849FF1D1D356AB4B16D162B /* BaseViewContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewContract.swift; sourceTree = "<group>"; };
 		E849FFD67FF1AE67B5464917 /* Respository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Respository.swift; sourceTree = "<group>"; };
-		F4793DBE7B6A2928EAFFC20A /* Pods-movierollTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movierollTests/Pods-movierollTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA27B7F96FA8AB4C0514AF4C /* Pods-movierollUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-movierollUITests/Pods-movierollUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FAFE044E97B9CEBCBFEAC429 /* Pods-movierollUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movierollUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movierollUITests/Pods-movierollUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0557A1E1F6750C06D1DC44 /* Pods_movieroll.framework in Frameworks */,
+				F5511A4D84C0C4D7FD103628 /* Pods_movieroll.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78ADEC500DF7D9A8BE63747F /* Pods_movierollTests.framework in Frameworks */,
+				2D20600697A054BA14BABCEB /* Pods_movierollTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,41 +152,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C919D1E8AC5785EA14E253B /* Pods_movierollUITests.framework in Frameworks */,
+				BAA5D217CA868277B75C147A /* Pods_movierollUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EC1ACC7E03DB52D194B4F66 /* Frameworks */ = {
+		1D03A529A4CBB25F8D5BDC0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				851E330660E30DD31911ED7A /* Pods_movieroll.framework */,
-				9A6CE8E155BBD2F51A2AAAB4 /* Pods_movierollTests.framework */,
-				93117A5A6FEFB49806D1D30A /* Pods_movierollUITests.framework */,
+				9366E4871139B649A861DC65 /* Pods_movieroll.framework */,
+				B499EA68677557B3617A764F /* Pods_movierollTests.framework */,
+				4F41205181D6AC4AE8A7414E /* Pods_movierollUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		48E6713A20C920A4EDE952DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6783A257E150AA1A6287184F /* Pods-movieroll.debug.xcconfig */,
-				345228276BFE7B4B5D648B04 /* Pods-movieroll.release.xcconfig */,
-				F4793DBE7B6A2928EAFFC20A /* Pods-movierollTests.debug.xcconfig */,
-				3B67CAA82774643B2E6029B2 /* Pods-movierollTests.release.xcconfig */,
-				89C81D3E19A7872E2E96BB1A /* Pods-movierollUITests.debug.xcconfig */,
-				A34AAE2BA4D2BDA90C18D86F /* Pods-movierollUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		7101B1342197805F00D94F4A /* userSettings */ = {
 			isa = PBXGroup;
 			children = (
 				71110D4D217FBEDC003963FD /* UserSettings.swift */,
-				71110D4F217FBEEB003963FD /* IUserSettings.swift */,
+				71110D4F217FBEEB003963FD /* UserSettingsContract.swift */,
 			);
 			path = userSettings;
 			sourceTree = "<group>";
@@ -220,7 +207,7 @@
 			children = (
 				7197257D211DCE29004DD742 /* Format.swift */,
 				719A923C2183A242002E905F /* Strings.swift */,
-				7101B13A2197824F00D94F4A /* Regex.swift */,
+				7101B13A2197824F00D94F4A /* Validators.swift */,
 			);
 			path = strings;
 			sourceTree = "<group>";
@@ -282,12 +269,12 @@
 			isa = PBXGroup;
 			children = (
 				E849FFD67FF1AE67B5464917 /* Respository.swift */,
-				E849FABF4D8BA465B2B2D75B /* IRepository.swift */,
+				E849FABF4D8BA465B2B2D75B /* RepositoryContract.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
 		};
-		7197256C211B6EBA004DD742 /* helpers */ = {
+		7197256C211B6EBA004DD742 /* utils */ = {
 			isa = PBXGroup;
 			children = (
 				7101B139219780EE00D94F4A /* openUrl */,
@@ -297,7 +284,7 @@
 				7101B135219780AF00D94F4A /* sharedPrefs */,
 				7101B1342197805F00D94F4A /* userSettings */,
 			);
-			path = helpers;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		719A92392183739A002E905F /* resources */ = {
@@ -319,8 +306,8 @@
 				71F3EFC12118B3AF00454D71 /* movierollTests */,
 				71F3EFCC2118B3AF00454D71 /* movierollUITests */,
 				71F3EFAB2118B3AF00454D71 /* Products */,
-				48E6713A20C920A4EDE952DB /* Pods */,
-				0EC1ACC7E03DB52D194B4F66 /* Frameworks */,
+				7AADCAB3C1A19CF86EF07793 /* Pods */,
+				1D03A529A4CBB25F8D5BDC0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,7 +328,7 @@
 				7110368C211B25050024D1C3 /* api */,
 				7110368D211B251C0024D1C3 /* models */,
 				719A92392183739A002E905F /* resources */,
-				7197256C211B6EBA004DD742 /* helpers */,
+				7197256C211B6EBA004DD742 /* utils */,
 				7110368E211B25310024D1C3 /* controllers */,
 			);
 			path = movieroll;
@@ -363,6 +350,19 @@
 				71F3EFCF2118B3AF00454D71 /* Info.plist */,
 			);
 			path = movierollUITests;
+			sourceTree = "<group>";
+		};
+		7AADCAB3C1A19CF86EF07793 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2709EBD8611039E2D447890 /* Pods-movieroll.debug.xcconfig */,
+				D84E5989C6436A70BCF9CF28 /* Pods-movieroll.release.xcconfig */,
+				0FD79E20A4DF5D06784FE10A /* Pods-movierollTests.debug.xcconfig */,
+				A4C1449DF6D9958E9F833CAC /* Pods-movierollTests.release.xcconfig */,
+				FAFE044E97B9CEBCBFEAC429 /* Pods-movierollUITests.debug.xcconfig */,
+				EA27B7F96FA8AB4C0514AF4C /* Pods-movierollUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E849F2FC27D176F67253A2AC /* login */ = {
@@ -421,11 +421,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71F3EFD22118B3AF00454D71 /* Build configuration list for PBXNativeTarget "movieroll" */;
 			buildPhases = (
-				EF2ABD550B462437EFB2DA7D /* [CP] Check Pods Manifest.lock */,
+				982DD609D730B14A7E211ECD /* [CP] Check Pods Manifest.lock */,
 				71F3EFA62118B3AF00454D71 /* Sources */,
 				71F3EFA72118B3AF00454D71 /* Frameworks */,
 				71F3EFA82118B3AF00454D71 /* Resources */,
-				0A902720E57715A7B4F520DB /* [CP] Embed Pods Frameworks */,
+				F9637003EBD78733F14905E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,7 +440,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71F3EFD52118B3AF00454D71 /* Build configuration list for PBXNativeTarget "movierollTests" */;
 			buildPhases = (
-				9CE8C25D381DC8525328B033 /* [CP] Check Pods Manifest.lock */,
+				369B8DE824E7178AD4879FAB /* [CP] Check Pods Manifest.lock */,
 				71F3EFBA2118B3AF00454D71 /* Sources */,
 				71F3EFBB2118B3AF00454D71 /* Frameworks */,
 				71F3EFBC2118B3AF00454D71 /* Resources */,
@@ -459,7 +459,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71F3EFD82118B3AF00454D71 /* Build configuration list for PBXNativeTarget "movierollUITests" */;
 			buildPhases = (
-				E8D382F9A0ACC0D65C0F30C7 /* [CP] Check Pods Manifest.lock */,
+				3B6033856C27540BB6DBCC78 /* [CP] Check Pods Manifest.lock */,
 				71F3EFC52118B3AF00454D71 /* Sources */,
 				71F3EFC62118B3AF00454D71 /* Frameworks */,
 				71F3EFC72118B3AF00454D71 /* Resources */,
@@ -549,29 +549,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A902720E57715A7B4F520DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-movieroll/Pods-movieroll-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-movieroll/Pods-movieroll-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9CE8C25D381DC8525328B033 /* [CP] Check Pods Manifest.lock */ = {
+		369B8DE824E7178AD4879FAB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -589,7 +567,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8D382F9A0ACC0D65C0F30C7 /* [CP] Check Pods Manifest.lock */ = {
+		3B6033856C27540BB6DBCC78 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -607,7 +585,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF2ABD550B462437EFB2DA7D /* [CP] Check Pods Manifest.lock */ = {
+		982DD609D730B14A7E211ECD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,6 +603,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9637003EBD78733F14905E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-movieroll/Pods-movieroll-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-movieroll/Pods-movieroll-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -637,7 +639,7 @@
 				7197256B211B6DBD004DD742 /* Headers.swift in Sources */,
 				7197256E211B6ED7004DD742 /* Spinner.swift in Sources */,
 				7197257E211DCE29004DD742 /* Format.swift in Sources */,
-				7101B13B2197824F00D94F4A /* Regex.swift in Sources */,
+				7101B13B2197824F00D94F4A /* Validators.swift in Sources */,
 				71972576211CCEE2004DD742 /* DiscoverItemModel.swift in Sources */,
 				71972569211B62B4004DD742 /* LanguageModel.swift in Sources */,
 				7101B12F21975B6700D94F4A /* RegisterContract.swift in Sources */,
@@ -657,7 +659,7 @@
 				7101B13121975B7B00D94F4A /* RegisterPresenter.swift in Sources */,
 				71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */,
 				718C334321973F25002FBFF0 /* LoginModel.swift in Sources */,
-				71110D50217FBEEB003963FD /* IUserSettings.swift in Sources */,
+				71110D50217FBEEB003963FD /* UserSettingsContract.swift in Sources */,
 				E849FFD0B925A523EF490B93 /* TraillerViewCell.swift in Sources */,
 				E849F9E96A92084B851252D4 /* GenresViewController.swift in Sources */,
 				E849F36A4CC165F9ADBDBF16 /* DiscoverContract.swift in Sources */,
@@ -667,7 +669,7 @@
 				E849FCB40A46F6DA873DF17F /* BaseViewController.swift in Sources */,
 				E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */,
 				E849F750EF98EFA2815D22C6 /* Respository.swift in Sources */,
-				E849F3E997316FDA81FBC5FA /* IRepository.swift in Sources */,
+				E849F3E997316FDA81FBC5FA /* RepositoryContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +837,7 @@
 		};
 		71F3EFD32118B3AF00454D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6783A257E150AA1A6287184F /* Pods-movieroll.debug.xcconfig */;
+			baseConfigurationReference = B2709EBD8611039E2D447890 /* Pods-movieroll.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -850,7 +852,7 @@
 		};
 		71F3EFD42118B3AF00454D71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 345228276BFE7B4B5D648B04 /* Pods-movieroll.release.xcconfig */;
+			baseConfigurationReference = D84E5989C6436A70BCF9CF28 /* Pods-movieroll.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -865,7 +867,7 @@
 		};
 		71F3EFD62118B3AF00454D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4793DBE7B6A2928EAFFC20A /* Pods-movierollTests.debug.xcconfig */;
+			baseConfigurationReference = 0FD79E20A4DF5D06784FE10A /* Pods-movierollTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -882,7 +884,7 @@
 		};
 		71F3EFD72118B3AF00454D71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B67CAA82774643B2E6029B2 /* Pods-movierollTests.release.xcconfig */;
+			baseConfigurationReference = A4C1449DF6D9958E9F833CAC /* Pods-movierollTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -899,7 +901,7 @@
 		};
 		71F3EFD92118B3AF00454D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C81D3E19A7872E2E96BB1A /* Pods-movierollUITests.debug.xcconfig */;
+			baseConfigurationReference = FAFE044E97B9CEBCBFEAC429 /* Pods-movierollUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -915,7 +917,7 @@
 		};
 		71F3EFDA2118B3AF00454D71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A34AAE2BA4D2BDA90C18D86F /* Pods-movierollUITests.release.xcconfig */;
+			baseConfigurationReference = EA27B7F96FA8AB4C0514AF4C /* Pods-movierollUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

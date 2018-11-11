@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol IRepository {
+protocol RepositoryContract {
     func loadLanguages(callback: @escaping (_ languages: [LanguageModel]) -> ())
     
     func retrieveDiscover(isMovie: Bool, genre: GenreModel, page: Int, callback: @escaping (_ response: DiscoverModel?) -> ())

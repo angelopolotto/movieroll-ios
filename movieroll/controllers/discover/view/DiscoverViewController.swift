@@ -48,11 +48,11 @@ class DiscoverViewController: BaseTableViewController, DiscoverContractView {
         // populate cell with infos
         let media = self.result![indexPath.row]
         cell.posterImageView.image = #imageLiteral(resourceName: "placeholder")
-        cell.posterImageView.downloadImageFrom(link: Urls.MediaImage(media.poster_path!), contentMode: UIViewContentMode.scaleAspectFit)
+        cell.posterImageView.downloadImageFrom(link: Urls.MediaImage(media.poster_path ?? ""), contentMode: UIViewContentMode.scaleAspectFit)
         
         cell.title.text = media.title
         cell.genres.text = media.genres?.joined(separator: " ")
-        cell.releaseLabel.text = media.release_date
+        cell.releaseLabel.text = formatDate(date: media.release_date!)
         cell.mediaType.text = media.media_type
         cell.votes.text = formatFloat(number: media.vote_average!)
         cell.popularity.text = formatFloat(number: media.popularity!)
