@@ -15,7 +15,7 @@ class RegisterViewController: BaseViewController, RegisterContractView {
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var region: UITextField!
+    @IBOutlet weak var region: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var nameError: UILabel!
     @IBOutlet weak var emailError: UILabel!
@@ -31,13 +31,16 @@ class RegisterViewController: BaseViewController, RegisterContractView {
             theme: "")
     }
     
+    @IBAction func region(_ sender: Any) {
+        print("region")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameError.isHidden = true
         emailError.isHidden = true
         passwordError.isHidden = true
-        region.allowsEditingTextAttributes = false
         
         Repository.shared.view = self
         presenter = RegisterPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared, validators: Validators.shared)

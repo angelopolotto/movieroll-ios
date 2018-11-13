@@ -3,27 +3,31 @@ PODS:
   - AlamofireObjectMapper (5.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.3)
+  - IQKeyboardManager (6.0.4)
   - ObjectMapper (3.3.0)
   - Validator (3.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.0)
+  - IQKeyboardManager (= 6.0.4)
   - Validator (= 3.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
+    - IQKeyboardManager
     - ObjectMapper
     - Validator
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  IQKeyboardManager: 29514134ef0334a6fa33cf4eee11c36c064baeaf
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: bd2a6c634e6a19ea91b8d1f363dbeebdf8a14286
+PODFILE CHECKSUM: bbb60303db640f94125782e5d84ca1fac16da609
 
 COCOAPODS: 1.5.3

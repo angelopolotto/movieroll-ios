@@ -9,8 +9,11 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import IQKeyboardManager
 
 class LoginViewController: BaseViewController, LoginContractView {
+    fileprivate var returnHandler : IQKeyboardReturnKeyHandler!
+    
     var presenter: LoginPresenter?
     
     @IBOutlet weak var email: UITextField!
@@ -23,11 +26,18 @@ class LoginViewController: BaseViewController, LoginContractView {
                                 password: password.text ?? "")
     }
     
+    deinit {
+        returnHandler = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         emailError.isHidden = true
         passwordError.isHidden = true
+        
+        returnHandler = IQKeyboardReturnKeyHandler(viewController: self)
+        returnHandler.lastTextFieldReturnKeyType = .done
         
         Repository.shared.view = self
         presenter = LoginPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared, validators: Validators.shared)

@@ -176,10 +176,7 @@ class Repository: RepositoryContract {
     }
     
     func refresh(token: String, callback: @escaping (_ response: String) -> ()) {
-        view.showProgress()
-        
-        //show the loading dialog to user
-        self.view.showProgress()
+//        view.showProgress()
         
         let parameters: Parameters = [
             "token": token
@@ -187,7 +184,7 @@ class Repository: RepositoryContract {
         Alamofire.request(Urls.Refresh, method: .post, parameters: parameters,
                           encoding: JSONEncoding.default, headers: Headers.NoAuth)
             .responseJSON { response in
-                self.view.hideProgress()
+//                self.view.hideProgress()
                 switch response.result {
                 case .success:
                     let jsonResponse = response.result.value as! NSDictionary
