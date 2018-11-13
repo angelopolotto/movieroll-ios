@@ -52,7 +52,7 @@ class RegisterViewController: BaseViewController, RegisterContractView {
     
     func nameError(_ message: String) {
         nameError.isHidden = false
-        emailError.text = message
+        nameError.text = message
     }
     
     func emailError(_ message: String) {

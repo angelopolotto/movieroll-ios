@@ -24,12 +24,10 @@ class LoginPresenter: LoginContractPresenter {
     
     func requestLogin(email: String, password: String) {
         if
-            validators.isValidEmail(text: email, onError: {message in self.view.emailError(message)} )
+            validators.isValidEmail(text: email, onError: {message in self.view.emailError(message)}, onSuccess: { view.emailErrorHide() } )
             &&
-            validators.isValidPassword(text: password, onError: {message in self.view.passwordError(message)} )
+                validators.isValidPassword(text: password, onError: {message in self.view.passwordError(message)}, onSuccess: { view.passwordErrorHide() } )
         {
-            view.emailErrorHide()
-            view.passwordErrorHide()
             self.repository.login(email: email, password: password) {
                 (loginModel) in
                 self.loginModel = loginModel

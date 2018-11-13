@@ -16,11 +16,11 @@ class RegisterPresenter: RegisterContractPresenter {
     
     func register(name: String, password: String, email: String, language: String,
                   region: String, theme: String) {
-        if validators.isValidName(text: name, onError: { message in view.nameError(message)})
+        if validators.isValidName(text: name, onError: { message in view.nameError(message)}, onSuccess: { view.nameErrorHide() })
             &&
-            validators.isValidPassword(text: password, onError: {message in view.passwordError(message)})
+            validators.isValidEmail(text: email, onError: {message in view.emailError(message)}, onSuccess: { view.emailErrorHide() })
             &&
-            validators.isValidEmail(text: email, onError: {message in view.emailError(message)})
+            validators.isValidPassword(text: password, onError: {message in view.passwordError(message)}, onSuccess: { view.passwordErrorHide() })
         {
             
             repository.register(name: name, password: password, email: email, language: language, region: region, theme: theme, callback: {
