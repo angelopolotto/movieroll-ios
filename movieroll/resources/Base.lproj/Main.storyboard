@@ -408,13 +408,11 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-tN-MOq">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Jx-ieo" customClass="DropDown" customModule="iOSDropDown">
                                         <rect key="frame" x="0.0" y="220" width="343" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Uig-uy-dRk"/>
-                                        </constraints>
-                                    </view>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ3-kE-00B">
                                         <rect key="frame" x="0.0" y="260" width="70.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -446,8 +444,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="TwC-Ed-wS9" secondAttribute="trailing" id="ABc-rg-RMb"/>
-                                    <constraint firstAttribute="trailing" secondItem="qgM-tN-MOq" secondAttribute="trailing" id="Hor-Ep-q3U"/>
                                     <constraint firstAttribute="trailing" secondItem="I4a-Wh-Kxs" secondAttribute="trailing" id="NBL-PU-TX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="aEl-Jx-ieo" secondAttribute="trailing" id="P7V-uF-tvX"/>
+                                    <constraint firstItem="aEl-Jx-ieo" firstAttribute="leading" secondItem="2Zw-pJ-fo2" secondAttribute="leading" id="QsX-zI-m6e"/>
                                     <constraint firstAttribute="trailing" secondItem="aZC-z4-7tM" secondAttribute="trailing" id="VRh-Is-NSl"/>
                                     <constraint firstAttribute="trailing" secondItem="lty-43-gRM" secondAttribute="trailing" id="pyN-Bg-tv2"/>
                                 </constraints>
@@ -469,7 +468,7 @@
                         <outlet property="nameError" destination="d1B-vw-nDb" id="tbi-VM-n1O"/>
                         <outlet property="password" destination="lty-43-gRM" id="VeY-TN-fdj"/>
                         <outlet property="passwordError" destination="FIg-jQ-nEG" id="hb1-vL-P9H"/>
-                        <outlet property="region" destination="qgM-tN-MOq" id="q9g-h9-DPS"/>
+                        <outlet property="region" destination="aEl-Jx-ieo" id="tPb-Qc-kf6"/>
                         <segue destination="0iu-EQ-6IT" kind="showDetail" identifier="DiscoverRegisterSegue" id="xzE-Fv-EbO"/>
                     </connections>
                 </viewController>
