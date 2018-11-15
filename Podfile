@@ -13,6 +13,7 @@ target 'movieroll' do
     pod 'AlamofireObjectMapper', '~> 5.0'
     pod 'Validator', '3.0.2'
     pod 'IQKeyboardManager', '6.0.4'
+    pod 'DropDown', '2.3.2'
     
   target 'movierollTests' do
     inherit! :search_paths

@@ -9,13 +9,14 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import DropDown
 
 class RegisterViewController: BaseViewController, RegisterContractView {
     var presenter: RegisterContractPresenter?
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var region: UIButton!
+    @IBOutlet weak var region: UIView!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var nameError: UILabel!
     @IBOutlet weak var emailError: UILabel!
@@ -31,16 +32,16 @@ class RegisterViewController: BaseViewController, RegisterContractView {
             theme: "")
     }
     
-    @IBAction func region(_ sender: Any) {
-        print("region")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameError.isHidden = true
         emailError.isHidden = true
         passwordError.isHidden = true
+        
+        let dropDown = DropDown()
+        dropDown.anchorView = region
+        dropDown.dataSource = ["Car", "Motorcycle", "Truck"]
         
         Repository.shared.view = self
         presenter = RegisterPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared, validators: Validators.shared)
