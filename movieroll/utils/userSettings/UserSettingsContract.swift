@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol IUserSettings {
+protocol UserSettingsContract {
     func getLanguages() -> LanguageModel?
     func saveLanguage(language: LanguageModel)
     func saveGenre(isMovie: Bool, genre: GenreModel)
+    func saveLogin(loginModel: LoginModel)
+    func getLogin() -> LoginModel?
     func getIsMovie() -> Bool
     func getGenre() -> GenreModel
 }

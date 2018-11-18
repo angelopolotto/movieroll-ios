@@ -10,27 +10,48 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class LoginViewController: UITableViewController {
+class LoginViewController: BaseViewController, LoginContractView {
+    var presenter: LoginPresenter?
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var emailError: UILabel!
+    @IBOutlet weak var passwordError: UILabel!
     
     @IBAction func login(_ sender: Any) {
-//        print("retrieve publicToken")
-//        let parameters:Parameters = [
-//            "email": self.selectedLanguage!.language ?? "en-US",
-//            "password": self.selectedLanguage!.region ?? "US"
-//        ]
-//        Alamofire.request(Urls.PublicToken, method: .post, parameters: parameters,
-//                          encoding: JSONEncoding.default, headers: Headers.NoAuth)
-//            .responseJSON { response in
-//                switch response.result {
-//                case .success:
-//                    let jsonResponse = response.result.value as! NSDictionary
-//                    if jsonResponse["token"] != nil {
-//                        Headers.token = String(describing: jsonResponse["token"]!)
-//                        print(Headers.token)
-//                    }
-//                }
-//        }
+        presenter?.requestLogin(email: email.text ?? "",
+                                password: password.text ?? "")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        emailError.isHidden = true
+        passwordError.isHidden = true
+        
+        Repository.shared.view = self
+        presenter = LoginPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared, validators: Validators.shared)
+    }
+    
+    func showDiscover() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func emailError(_ message: String) {
+        emailError.isHidden = false
+        emailError.text = message
+    }
+    
+    func passwordError(_ message: String) {
+        passwordError.isHidden = false
+        passwordError.text = message
+    }
+    
+    func emailErrorHide() {
+        emailError.isHidden = true
+    }
+    
+    func passwordErrorHide() {
+        passwordError.isHidden = true
     }
 }

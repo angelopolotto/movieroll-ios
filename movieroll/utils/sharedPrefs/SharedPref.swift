@@ -14,9 +14,9 @@ struct SharedPref {
         return preferences.integer(forKey: key)
     }
     
-    static func read(key: String) -> String {
+    static func read(key: String) -> String? {
         let preferences = UserDefaults.standard
-        return preferences.string(forKey: key)!
+        return preferences.string(forKey: key)
     }
     
     static func write(key: String, value: Int) {

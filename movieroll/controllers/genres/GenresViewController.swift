@@ -17,7 +17,8 @@ class GenresViewController: BaseTableViewController, GenresViewContract {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = GenresPresenter(view: self, repository: Repository(view: self), userSettings: UserSettings.shared)
+        Repository.shared.view = self
+        presenter = GenresPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared)
         
         // request the supported languages
         presenter?.retrieveLanguages()

@@ -5,10 +5,14 @@
 
 import Foundation
 
-protocol DiscoverContractView {
+protocol DiscoverContractView: BaseViewContract {
     func loadContent(result: [DiscoverItemModel]?)
+    func showLogin()
+    func resolveUrl(url: String)
 }
 
 protocol DiscoverContractPresenter {
     func retrieveDiscover()
+    func addToList(media_id: Int)
+    func resolveUrl(url: String)
 }

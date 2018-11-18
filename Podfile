@@ -11,6 +11,8 @@ target 'movieroll' do
 #  pod 'RxCocoa',    '~> 4.0'
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireObjectMapper', '~> 5.0'
+    pod 'Validator', '3.0.2'
+    pod 'IQKeyboardManager', '6.0.4'
     
   target 'movierollTests' do
     inherit! :search_paths

@@ -8,5 +8,6 @@ import Foundation
 protocol BaseViewContract {
     func showProgress()
     func hideProgress()
+    func showMessage(message: String)
     func showError(message: String)
 }

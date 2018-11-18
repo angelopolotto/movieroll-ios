@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserSettings: IUserSettings {
+class UserSettings: UserSettingsContract {
     static let shared = UserSettings()
     
     var isMovie: Bool?
@@ -21,7 +21,12 @@ class UserSettings: IUserSettings {
     }
     
     func getLanguages() -> LanguageModel? {
-        return LanguageModel(JSONString: SharedPref.read(key: "selected_language")) ?? nil
+        let language: String? = SharedPref.read(key: "selected_language")
+        if (language != nil) {
+            return LanguageModel(JSONString: language!)
+        } else {
+            return nil
+        }
     }
     
     func saveGenre(isMovie: Bool, genre: GenreModel) {
@@ -32,7 +37,21 @@ class UserSettings: IUserSettings {
     func getIsMovie() -> Bool {
         return self.isMovie!
     }
+    
     func getGenre() -> GenreModel {
         return self.genre!
+    }
+    
+    func saveLogin(loginModel: LoginModel) {
+        SharedPref.write(key: "login_data", value: (loginModel.toJSONString())!)
+    }
+    
+    func getLogin() -> LoginModel? {
+        let login: String? = SharedPref.read(key: "login_data")
+        if (login != nil) {
+            return LoginModel(JSONString: login!)
+        } else {
+            return nil
+        }
     }
 }
