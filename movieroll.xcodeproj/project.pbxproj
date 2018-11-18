@@ -24,6 +24,7 @@
 		7193B86821A1DC8C00E01685 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86721A1DC8C00E01685 /* CustomPicker.swift */; };
 		7193B86C21A1ED9900E01685 /* UITextFieldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86B21A1ED9900E01685 /* UITextFieldPicker.swift */; };
 		7193B86F21A1F15F00E01685 /* UICustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86E21A1F15F00E01685 /* UICustomLabel.swift */; };
+		7193B87421A2299200E01685 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B87321A2299200E01685 /* ActionSheet.swift */; };
 		71972569211B62B4004DD742 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972568211B62B4004DD742 /* LanguageModel.swift */; };
 		7197256B211B6DBD004DD742 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256A211B6DBD004DD742 /* Headers.swift */; };
 		7197256E211B6ED7004DD742 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256D211B6ED7004DD742 /* Spinner.swift */; };
@@ -93,6 +94,7 @@
 		7193B86721A1DC8C00E01685 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		7193B86B21A1ED9900E01685 /* UITextFieldPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldPicker.swift; sourceTree = "<group>"; };
 		7193B86E21A1F15F00E01685 /* UICustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomLabel.swift; sourceTree = "<group>"; };
+		7193B87321A2299200E01685 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		71972568211B62B4004DD742 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		7197256A211B6DBD004DD742 /* Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
 		7197256D211B6ED7004DD742 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -313,9 +315,18 @@
 			path = profile;
 			sourceTree = "<group>";
 		};
+		7193B87221A2291600E01685 /* actionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				7193B87321A2299200E01685 /* ActionSheet.swift */,
+			);
+			path = actionSheet;
+			sourceTree = "<group>";
+		};
 		7197256C211B6EBA004DD742 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				7193B87221A2291600E01685 /* actionSheet */,
 				7193B86D21A1F0F300E01685 /* label */,
 				7193B86621A1DC4500E01685 /* picker */,
 				7101B139219780EE00D94F4A /* openUrl */,
@@ -680,6 +691,7 @@
 				71972574211CCED4004DD742 /* DiscoverModel.swift in Sources */,
 				71972580211DDB79004DD742 /* ImageViewHelper.swift in Sources */,
 				7197256B211B6DBD004DD742 /* Headers.swift in Sources */,
+				7193B87421A2299200E01685 /* ActionSheet.swift in Sources */,
 				7197256E211B6ED7004DD742 /* Spinner.swift in Sources */,
 				7197257E211DCE29004DD742 /* Format.swift in Sources */,
 				7101B13B2197824F00D94F4A /* Validators.swift in Sources */,

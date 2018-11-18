@@ -80,15 +80,13 @@ class GenresViewController: BaseTableViewController, GenresViewContract {
     
     // show dialog to choose lang
     func showDialoag(languages: [LanguageModel]) {
-        let langAlert = UIAlertController(title: Strings.shared.value(forKey: "genres.dialog_title"),
-                                          message: Strings.shared.value(forKey: "genres.dialog_message"), preferredStyle: .actionSheet)
-        for lang in languages {
-            langAlert.addAction(UIAlertAction(title: lang.description, style: .default, handler: {
-                (UIAlertAction) in
-                self.presenter?.selectedLanguage(language: lang)
-            }))
+        displayAction(title: Strings.shared.value(forKey: "genres.dialog_title"),
+                      message: Strings.shared.value(forKey: "genres.dialog_message"),
+                      actionData: languages,
+                      actionTitle: { (index) -> (String) in
+                        return languages[index].description!}) { (index) in
+                            self.presenter?.selectedLanguage(language: languages[index])
         }
-        self.present(langAlert, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
