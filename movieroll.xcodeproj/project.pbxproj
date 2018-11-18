@@ -21,6 +21,9 @@
 		718C333F21971A8D002FBFF0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C333E21971A8D002FBFF0 /* LoginPresenter.swift */; };
 		718C334121971AA2002FBFF0 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C334021971AA2002FBFF0 /* LoginContract.swift */; };
 		718C334321973F25002FBFF0 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C334221973F25002FBFF0 /* LoginModel.swift */; };
+		7193B86821A1DC8C00E01685 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86721A1DC8C00E01685 /* CustomPicker.swift */; };
+		7193B86C21A1ED9900E01685 /* UITextFieldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86B21A1ED9900E01685 /* UITextFieldPicker.swift */; };
+		7193B86F21A1F15F00E01685 /* UICustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193B86E21A1F15F00E01685 /* UICustomLabel.swift */; };
 		71972569211B62B4004DD742 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71972568211B62B4004DD742 /* LanguageModel.swift */; };
 		7197256B211B6DBD004DD742 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256A211B6DBD004DD742 /* Headers.swift */; };
 		7197256E211B6ED7004DD742 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7197256D211B6ED7004DD742 /* Spinner.swift */; };
@@ -87,6 +90,9 @@
 		718C333E21971A8D002FBFF0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		718C334021971AA2002FBFF0 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
 		718C334221973F25002FBFF0 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		7193B86721A1DC8C00E01685 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		7193B86B21A1ED9900E01685 /* UITextFieldPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldPicker.swift; sourceTree = "<group>"; };
+		7193B86E21A1F15F00E01685 /* UICustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomLabel.swift; sourceTree = "<group>"; };
 		71972568211B62B4004DD742 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		7197256A211B6DBD004DD742 /* Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
 		7197256D211B6ED7004DD742 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -274,9 +280,28 @@
 			path = repository;
 			sourceTree = "<group>";
 		};
+		7193B86621A1DC4500E01685 /* picker */ = {
+			isa = PBXGroup;
+			children = (
+				7193B86721A1DC8C00E01685 /* CustomPicker.swift */,
+				7193B86B21A1ED9900E01685 /* UITextFieldPicker.swift */,
+			);
+			path = picker;
+			sourceTree = "<group>";
+		};
+		7193B86D21A1F0F300E01685 /* label */ = {
+			isa = PBXGroup;
+			children = (
+				7193B86E21A1F15F00E01685 /* UICustomLabel.swift */,
+			);
+			path = label;
+			sourceTree = "<group>";
+		};
 		7197256C211B6EBA004DD742 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				7193B86D21A1F0F300E01685 /* label */,
+				7193B86621A1DC4500E01685 /* picker */,
 				7101B139219780EE00D94F4A /* openUrl */,
 				7101B138219780DF00D94F4A /* strings */,
 				7101B137219780D300D94F4A /* image */,
@@ -615,7 +640,6 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -624,7 +648,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDropDown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -655,12 +678,14 @@
 				E849F5EA2996A0FABC1B673C /* GenreModel.swift in Sources */,
 				71972578211CD190004DD742 /* VideoModel.swift in Sources */,
 				71110D4C217FBC51003963FD /* GenresPresenter.swift in Sources */,
+				7193B86F21A1F15F00E01685 /* UICustomLabel.swift in Sources */,
 				71110D4E217FBEDC003963FD /* UserSettings.swift in Sources */,
 				E849FECFBC050FD887D608E5 /* DiscoverViewCell.swift in Sources */,
 				E849F6C0F561ECC13B9380A9 /* DiscoverViewController.swift in Sources */,
 				E849FAD31C67BF516C96AD69 /* LoginViewController.swift in Sources */,
 				E849F00DC74CF4CC870BD80E /* RegisterViewController.swift in Sources */,
 				7101B13121975B7B00D94F4A /* RegisterPresenter.swift in Sources */,
+				7193B86C21A1ED9900E01685 /* UITextFieldPicker.swift in Sources */,
 				71110D4A217FBBBE003963FD /* GenresContract.swift in Sources */,
 				718C334321973F25002FBFF0 /* LoginModel.swift in Sources */,
 				71110D50217FBEEB003963FD /* UserSettingsContract.swift in Sources */,
@@ -674,6 +699,7 @@
 				E849F1505D5B402114DD629D /* DiscoverPresenter.swift in Sources */,
 				E849F750EF98EFA2815D22C6 /* Respository.swift in Sources */,
 				E849F3E997316FDA81FBC5FA /* RepositoryContract.swift in Sources */,
+				7193B86821A1DC8C00E01685 /* CustomPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

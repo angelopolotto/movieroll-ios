@@ -9,16 +9,17 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
-import iOSDropDown
 
 class RegisterViewController: BaseViewController, RegisterContractView {
     var presenter: RegisterContractPresenter?
+    var selectedLanguage: LanguageModel?
+    var languages: [LanguageModel]?
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
-    
-    @IBOutlet weak var region: DropDown!
+    @IBOutlet weak var region: UITextFieldPicker!
     @IBOutlet weak var password: UITextField!
+    
     @IBOutlet weak var nameError: UILabel!
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
@@ -28,14 +29,10 @@ class RegisterViewController: BaseViewController, RegisterContractView {
             name: name.text ?? "",
             password: password.text ?? "",
             email: email.text ?? "",
-            language: "",
-            region: "",
+            language: selectedLanguage?.language ?? "",
+            region: selectedLanguage?.language ?? "",
             theme: "")
     }
-    
-//    override func viewWillLayoutSubviews() {
-//        region.layer.zPosition = 1
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,20 +41,23 @@ class RegisterViewController: BaseViewController, RegisterContractView {
         emailError.isHidden = true
         passwordError.isHidden = true
         
-        region.bringSubview(toFront: self.view)
-        
-        region.placeholder = "Select a region"
-        // The list of array to display. Can be changed dynamically
-        region.optionArray = ["Option 1", "Option 2", "Option 3"]
-        //Its Id Values and its optional
-        region.optionIds = [1,23,54,22]
-        // The the Closure returns Selected Index and String
-        region.didSelect{(selectedText , index ,id) in
-//            self.valueLabel.text = "Selected String: \(selectedText) \n index: \(index)"
-        }
-        
         Repository.shared.view = self
         presenter = RegisterPresenter(view: self, repository: Repository.shared, userSettings: UserSettings.shared, validators: Validators.shared)
+        
+        presenter?.retrieveLanguages()
+    }
+    
+    func selectedLanguage(language: LanguageModel) {
+        region.text = language.description
+    }
+    
+    func pickerList(languages: [LanguageModel]) {
+        self.languages = languages
+        region.loadDropdownData(data: languages, titleForRow: { (row) -> (String) in
+            languages[row].description!
+        }) { (row) in
+            self.selectedLanguage = languages[row]
+        }
     }
     
     func showDiscover() {

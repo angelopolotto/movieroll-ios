@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>register</key>
+	<dict>
+		<key>name</key>
+		<string>Name:</string>
+		<key>email</key>
+		<string>Email:</string>
+		<key>region</key>
+		<string>Region:</string>
+		<key>password</key>
+		<string>Passoword:</string>
+	</dict>
 	<key>errors</key>
 	<dict>
 		<key>required</key>

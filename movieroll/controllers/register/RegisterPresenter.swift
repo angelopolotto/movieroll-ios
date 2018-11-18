@@ -13,6 +13,8 @@ class RegisterPresenter: RegisterContractPresenter {
     let repository: RepositoryContract
     let userSettings: UserSettingsContract
     let validators: ValidatorsContract
+    var languages: [LanguageModel]?
+    var selectedLanguage: LanguageModel?
     
     func register(name: String, password: String, email: String, language: String,
                   region: String, theme: String) {
@@ -28,6 +30,16 @@ class RegisterPresenter: RegisterContractPresenter {
                 self.userSettings.saveLogin(loginModel: register)
                 self.view.showDiscover()
             })
+        }
+    }
+    
+    func retrieveLanguages() {
+        if let language = userSettings.getLanguages() {
+            self.view.selectedLanguage(language: language)
+        }
+        repository.loadLanguages() { (languages) -> () in
+            self.languages = languages
+            self.view.pickerList(languages: languages)
         }
     }
     

@@ -10,15 +10,20 @@ import Foundation
 
 protocol RegisterContractView {
     func showDiscover()
+    
     func nameError(_ message: String)
     func emailError(_ message: String)
     func passwordError(_ message: String)
     func nameErrorHide()
     func emailErrorHide()
     func passwordErrorHide()
+    
+    func selectedLanguage(language: LanguageModel)
+    func pickerList(languages: [LanguageModel])
 }
 
 protocol RegisterContractPresenter {
+    func retrieveLanguages()
     func register(name: String, password: String, email: String, language: String,
                   region: String, theme: String)
 }
