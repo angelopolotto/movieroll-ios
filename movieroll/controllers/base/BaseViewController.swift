@@ -65,14 +65,14 @@ class BaseTableViewController: UITableViewController, BaseViewContract {
     }
     
     func showProgress() {
-        sv = UIViewController.displaySpinner(onView: self.view)
+        sv = displaySpinner(onView: self.view)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func hideProgress() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         if (sv != nil) {
-            UIViewController.removeSpinner(spinner: sv!)
+            removeSpinner(spinner: sv!)
         }
     }
     
