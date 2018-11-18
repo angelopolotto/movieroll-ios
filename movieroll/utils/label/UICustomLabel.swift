@@ -11,20 +11,9 @@ import UIKit
 @IBDesignable
 class UICustomLabel: UILabel {
     
-    @IBInspectable var textResource: String = "" {
+    @IBInspectable var textResource: String = "Text Resource Empty" {
         didSet {
-            if textResource == "" {
-                text = textDefault
-            }
             text = Strings.shared.value(forKey: textResource)
-        }
-    }
-    
-    @IBInspectable var textDefault: String = "textDefault" {
-        didSet {
-            if textResource == "" {
-                text = textDefault
-            }
         }
     }
 }

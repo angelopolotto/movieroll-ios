@@ -252,6 +252,8 @@
 		7110368E211B25310024D1C3 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7193B87121A2239300E01685 /* profile */,
+				7193B87021A2238400E01685 /* favorites */,
 				E849F772C963D08A05AD0FF2 /* genres */,
 				E849FC8332137061F4E6AEA1 /* discover */,
 				E849F2FC27D176F67253A2AC /* login */,
@@ -295,6 +297,20 @@
 				7193B86E21A1F15F00E01685 /* UICustomLabel.swift */,
 			);
 			path = label;
+			sourceTree = "<group>";
+		};
+		7193B87021A2238400E01685 /* favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = favorites;
+			sourceTree = "<group>";
+		};
+		7193B87121A2239300E01685 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 		7197256C211B6EBA004DD742 /* utils */ = {

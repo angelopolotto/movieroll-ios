@@ -373,7 +373,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="textResource" value="register.name"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="textDefault" value="Name:"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textDefault" value="Name default:"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TwC-Ed-wS9">
@@ -525,6 +525,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="dHy-bV-7U5"/>
         <segue reference="xzE-Fv-EbO"/>
     </inferredMetricsTieBreakers>
 </document>
